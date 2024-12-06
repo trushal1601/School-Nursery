@@ -14,6 +14,16 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-NewsApp-NewsAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-NewsApp-NewsAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		BB0E5FE279ACFC4B5237D43D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		D01B45ECDA044D939BD8FB49 /* Lexend-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D975F7293C9646E3BACC8659 /* Lexend-Black.ttf */; };
+		2F72A16202134275A98622D6 /* Lexend-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A897CE59F3EF4723A9369ECF /* Lexend-Bold.ttf */; };
+		5DF61AEB49D442458BFDE772 /* Lexend-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B454709FC050473D81273A9B /* Lexend-ExtraBold.ttf */; };
+		063348517C6842E09CD76EEA /* Lexend-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29C696B43DB1477FA4E97A4A /* Lexend-ExtraLight.ttf */; };
+		C17417374A5E4247B7388FA7 /* Lexend-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0322E3D8ABD04D75B9E2731F /* Lexend-Light.ttf */; };
+		52A4444C49AA431D8DB99BD6 /* Lexend-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F014E00FBE04B45878BCC47 /* Lexend-Medium.ttf */; };
+		0E5E70DF27AA439BAF63CDA7 /* Lexend-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03E9D21E63D74E90AE2D01B3 /* Lexend-Regular.ttf */; };
+		D63007C0A06A403CA8A456FB /* Lexend-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86DAC0703FEC4E3E8A136307 /* Lexend-SemiBold.ttf */; };
+		0ECB667A01D2496FB290ABE0 /* Lexend-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDCCFFAD33244D808101AD24 /* Lexend-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +55,15 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = NewsApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-NewsApp-NewsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp-NewsAppTests.release.xcconfig"; path = "Target Support Files/Pods-NewsApp-NewsAppTests/Pods-NewsApp-NewsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		D975F7293C9646E3BACC8659 /* Lexend-Black.ttf */ = {isa = PBXFileReference; name = "Lexend-Black.ttf"; path = "../App/assets/fonts/Lexend-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A897CE59F3EF4723A9369ECF /* Lexend-Bold.ttf */ = {isa = PBXFileReference; name = "Lexend-Bold.ttf"; path = "../App/assets/fonts/Lexend-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B454709FC050473D81273A9B /* Lexend-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Lexend-ExtraBold.ttf"; path = "../App/assets/fonts/Lexend-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		29C696B43DB1477FA4E97A4A /* Lexend-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Lexend-ExtraLight.ttf"; path = "../App/assets/fonts/Lexend-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0322E3D8ABD04D75B9E2731F /* Lexend-Light.ttf */ = {isa = PBXFileReference; name = "Lexend-Light.ttf"; path = "../App/assets/fonts/Lexend-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4F014E00FBE04B45878BCC47 /* Lexend-Medium.ttf */ = {isa = PBXFileReference; name = "Lexend-Medium.ttf"; path = "../App/assets/fonts/Lexend-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		03E9D21E63D74E90AE2D01B3 /* Lexend-Regular.ttf */ = {isa = PBXFileReference; name = "Lexend-Regular.ttf"; path = "../App/assets/fonts/Lexend-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		86DAC0703FEC4E3E8A136307 /* Lexend-SemiBold.ttf */ = {isa = PBXFileReference; name = "Lexend-SemiBold.ttf"; path = "../App/assets/fonts/Lexend-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EDCCFFAD33244D808101AD24 /* Lexend-Thin.ttf */ = {isa = PBXFileReference; name = "Lexend-Thin.ttf"; path = "../App/assets/fonts/Lexend-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +143,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				861E804EC5E74412931BFFDC /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -149,6 +169,23 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		861E804EC5E74412931BFFDC /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				D975F7293C9646E3BACC8659 /* Lexend-Black.ttf */,
+				A897CE59F3EF4723A9369ECF /* Lexend-Bold.ttf */,
+				B454709FC050473D81273A9B /* Lexend-ExtraBold.ttf */,
+				29C696B43DB1477FA4E97A4A /* Lexend-ExtraLight.ttf */,
+				0322E3D8ABD04D75B9E2731F /* Lexend-Light.ttf */,
+				4F014E00FBE04B45878BCC47 /* Lexend-Medium.ttf */,
+				03E9D21E63D74E90AE2D01B3 /* Lexend-Regular.ttf */,
+				86DAC0703FEC4E3E8A136307 /* Lexend-SemiBold.ttf */,
+				EDCCFFAD33244D808101AD24 /* Lexend-Thin.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -245,6 +282,16 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				BB0E5FE279ACFC4B5237D43D /* PrivacyInfo.xcprivacy in Resources */,
+				D01B45ECDA044D939BD8FB49 /* Lexend-Black.ttf in Resources */,
+				2F72A16202134275A98622D6 /* Lexend-Bold.ttf in Resources */,
+				5DF61AEB49D442458BFDE772 /* Lexend-ExtraBold.ttf in Resources */,
+				063348517C6842E09CD76EEA /* Lexend-ExtraLight.ttf in Resources */,
+				C17417374A5E4247B7388FA7 /* Lexend-Light.ttf in Resources */,
+				52A4444C49AA431D8DB99BD6 /* Lexend-Medium.ttf in Resources */,
+				0E5E70DF27AA439BAF63CDA7 /* Lexend-Regular.ttf in Resources */,
+				D63007C0A06A403CA8A456FB /* Lexend-SemiBold.ttf in Resources */,
+				0ECB667A01D2496FB290ABE0 /* Lexend-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,7 +631,14 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				USE_HERMES = true;
 			};
 			name = Debug;
 		};
@@ -649,7 +703,13 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
