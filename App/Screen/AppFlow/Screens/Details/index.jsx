@@ -38,7 +38,7 @@ const Details = ({route, navigation}) => {
         const nextIndex = prevIndex + 1;
         if (nextIndex >= details.headerImg.length) {
           return 0;
-        }
+        } 
         return nextIndex;
       });
     }, 2000);
