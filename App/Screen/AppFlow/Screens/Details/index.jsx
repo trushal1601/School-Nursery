@@ -32,24 +32,24 @@ const Details = ({route, navigation}) => {
     setExpandedId(!expandedId);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex(prevIndex => {
-        const nextIndex = prevIndex + 1;
-        if (nextIndex >= details.headerImg.length) {
-          return 0;
-        } 
-        return nextIndex;
-      });
-    }, 2000);
-    return () => clearInterval(interval);
-  }, [details.headerImg.length]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentIndex(prevIndex => {
+  //       const nextIndex = prevIndex + 1;
+  //       if (nextIndex >= details.headerImg.length) {
+  //         return 0;
+  //       }
+  //       return nextIndex;
+  //     });
+  //   }, 2000);
+  //   return () => clearInterval(interval);
+  // }, [details.headerImg.length]);
 
-  useEffect(() => {
-    if (flatListRef.current) {
-      flatListRef.current.scrollToIndex({index: currentIndex, animated: true});
-    }
-  }, [currentIndex]);
+  // useEffect(() => {
+  //   if (flatListRef.current) {
+  //     flatListRef.current.scrollToIndex({index: currentIndex, animated: true});
+  //   }
+  // }, [currentIndex]);
 
   const TimingData = Object.entries(details.timing).map(([day, timing]) => ({
     day,
@@ -69,9 +69,9 @@ const Details = ({route, navigation}) => {
             ref={flatListRef}
             data={details.headerImg}
             horizontal
-            pagingEnabled
-            snapToInterval={width}
-            decelerationRate="fast"
+            // pagingEnabled
+            // snapToInterval={width}
+            // decelerationRate="fast"
             showsHorizontalScrollIndicator={false}
             renderItem={({item}) => (
               <View style={DetailsStyle.imageContainer}>
@@ -117,7 +117,7 @@ const Details = ({route, navigation}) => {
                     style={{}}
                   /> */}
                   <AirbnbRating
-                    size={Scale(14)}
+                    size={Scale(10)}
                     count={5}
                     defaultRating={4}
                     showRating={false}

@@ -39,6 +39,7 @@ export const DetailsStyle = StyleSheet.create({
   statusText: {
     padding: Scale(4),
     paddingHorizontal: Scale(8),
+    fontFamily:Fonts.Lexend_Medium,
     borderRadius: Scale(8),
     alignItems: 'flex-start',
     alignSelf: 'flex-end',
@@ -47,11 +48,11 @@ export const DetailsStyle = StyleSheet.create({
     flexDirection: 'row',
     alignSelf: 'flex-end',
     alignItems: 'center',
-    gap: Scale(20),
+    gap: Scale(10),
   },
   phoneMapImg: {
-    height: Scale(20),
-    width: Scale(20),
+    height: Scale(16),
+    width: Scale(16),
     resizeMode: 'contain',
   },
   mapContainer: {

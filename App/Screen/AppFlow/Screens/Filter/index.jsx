@@ -12,6 +12,7 @@ import Colors from '../../../../assets/colors/Colors';
 import Fonts from '../../../../assets/fonts/Fonts';
 import {FilterData} from '../../../../Components/JsonData/JsonData';
 import {FilterStyle} from './FilterStyles';
+import Labels from '../../../../assets/Label/Labels';
 
 const Filter = ({navigation}) => {
   const [checkedItems, setCheckedItems] = useState({});
@@ -49,7 +50,7 @@ const Filter = ({navigation}) => {
 
   return (
     <View style={FilterStyle.container}>
-      <Header header={'Filter'} />
+      <Header header={Labels.filter} />
       <ScrollView
         showsVerticalScrollIndicator={false}
         style={FilterStyle.scrollView}>

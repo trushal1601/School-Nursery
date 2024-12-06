@@ -1,16 +1,12 @@
 import React, {useState} from 'react';
-import {
-  Text,
-  TextInput,
-  View,
-  TouchableOpacity,
-} from 'react-native';
+import {Text, TextInput, View, TouchableOpacity} from 'react-native';
 import {Dropdown} from 'react-native-element-dropdown';
 import Fonts from '../../../../assets/fonts/Fonts';
 import Colors from '../../../../assets/colors/Colors';
 import Header from '../../../../Components/Header';
-import { ContactUsStyle } from './ContactUsStyle';
+import {ContactUsStyle} from './ContactUsStyle';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
+import Labels from '../../../../assets/Label/Labels';
 
 const ContactUs = ({navigation}) => {
   const [formValues, setFormValues] = useState({
@@ -60,7 +56,7 @@ const ContactUs = ({navigation}) => {
 
   return (
     <View style={ContactUsStyle.container}>
-      <Header header={'Contact us'} />
+      <Header header={Labels.contact_Us} />
       <View style={ContactUsStyle.formContainer}>
         <View style={ContactUsStyle.formGroup}>
           <Text style={ContactUsStyle.label}>Name</Text>
@@ -70,7 +66,9 @@ const ContactUs = ({navigation}) => {
             onChangeText={value => handleChange('name', value)}
             value={formValues.name}
           />
-          {errors.name && <Text style={ContactUsStyle.errorText}>{errors.name}</Text>}
+          {errors.name && (
+            <Text style={ContactUsStyle.errorText}>{errors.name}</Text>
+          )}
         </View>
         <View style={ContactUsStyle.formGroup}>
           <Text style={ContactUsStyle.label}>Email</Text>
@@ -80,7 +78,9 @@ const ContactUs = ({navigation}) => {
             onChangeText={value => handleChange('email', value)}
             value={formValues.email}
           />
-          {errors.email && <Text style={ContactUsStyle.errorText}>{errors.email}</Text>}
+          {errors.email && (
+            <Text style={ContactUsStyle.errorText}>{errors.email}</Text>
+          )}
         </View>
         <View style={ContactUsStyle.formGroup}>
           <Text style={ContactUsStyle.label}>I am</Text>
@@ -88,14 +88,18 @@ const ContactUs = ({navigation}) => {
             style={ContactUsStyle.dropdown}
             fontFamily={Fonts.Lexend_Regular}
             data={data}
-            placeholderStyle={{fontSize:Scale(14)}}
+            placeholderStyle={{fontSize: Scale(14), color: Colors.DarkGrey}}
             labelField="label"
+            selectedTextStyle={{fontSize: Scale(13), color: Colors.Black}}
+            itemTextStyle={{fontSize: Scale(12), color: Colors.Black}}
             valueField="value"
             placeholder="Select an item"
             value={formValues.role}
             onChange={item => handleChange('role', item.value)}
           />
-          {errors.role && <Text style={ContactUsStyle.errorText}>{errors.role}</Text>}
+          {errors.role && (
+            <Text style={ContactUsStyle.errorText}>{errors.role}</Text>
+          )}
         </View>
         <View style={ContactUsStyle.formGroup}>
           <Text style={ContactUsStyle.label}>Message</Text>
@@ -103,7 +107,7 @@ const ContactUs = ({navigation}) => {
             multiline={true}
             numberOfLines={4}
             style={ContactUsStyle.textArea}
-            placeholder="Type here..."
+            placeholder="Type Here..."
             onChangeText={value => handleChange('message', value)}
             value={formValues.message}
           />
@@ -112,7 +116,9 @@ const ContactUs = ({navigation}) => {
           )}
         </View>
         <View style={ContactUsStyle.buttonContainer}>
-          <TouchableOpacity style={ContactUsStyle.button} onPress={handleSubmit}>
+          <TouchableOpacity
+            style={ContactUsStyle.button}
+            onPress={handleSubmit}>
             <Text style={ContactUsStyle.buttonText}>Submit</Text>
           </TouchableOpacity>
         </View>
@@ -122,5 +128,3 @@ const ContactUs = ({navigation}) => {
 };
 
 export default ContactUs;
-
-

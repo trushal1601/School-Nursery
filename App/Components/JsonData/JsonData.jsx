@@ -1,10 +1,11 @@
 import {date} from 'yup';
 import Colors from '../../assets/colors/Colors';
+import Labels from '../../assets/Label/Labels';
 
 export const Nursery = [
   {
     id: 1,
-    category: 'Nurseries',
+    category: Labels.nursery,
     contact: 'Thavam Sathasivam',
     headerImg: [
       require('../../assets/images/Nursery.png'),
@@ -50,7 +51,8 @@ export const Nursery = [
   },
   {
     id: 2,
-    category: 'Nurseries',
+    category: Labels.nursery,
+
     contact: 'Thavam Sathasivam',
     headerImg: [
       require('../../assets/images/Nursery.png'),
@@ -96,7 +98,7 @@ export const Nursery = [
   },
   {
     id: 3,
-    category: 'Nurseries',
+    category: Labels.nursery,
     contact: 'Thavam Sathasivam',
     headerImg: [
       require('../../assets/images/Nursery.png'),
@@ -145,7 +147,8 @@ export const Nursery = [
 export const NurseryGroup = [
   {
     id: 1,
-    category: 'Nurseries',
+    category: Labels.nursery,
+
     contact: 'Thavam Sathasivam',
     name: 'St. George Nursery Schools',
     headerImg: [
@@ -186,12 +189,14 @@ export const NurseryGroup = [
         time: 'Close',
       },
     },
-    img: require('../../assets/images/nurseryG1.png'),
+    // img: require('../../assets/images/nurseryG1.png'),
+    img:'https://fbflipper.com/img/icon.png',
     status: 'Open',
   },
   {
     id: 2,
-    category: 'Nurseries',
+    category: Labels.nursery,
+
     contact: 'Thavam Sathasivam',
     headerImg: [
       require('../../assets/images/Nursery.png'),
@@ -237,7 +242,8 @@ export const NurseryGroup = [
   },
   {
     id: 3,
-    category: 'Nurseries',
+    category: Labels.nursery,
+
     contact: 'Thavam Sathasivam',
     headerImg: [
       require('../../assets/images/Nursery.png'),
@@ -285,7 +291,7 @@ export const NurseryGroup = [
 export const School = [
   {
     id: 1,
-    category: 'Schools',
+    category: Labels.school,
     contact: 'Graham Ellis',
     headerImg: [
       require('../../assets/images/School.png'),
@@ -331,7 +337,8 @@ export const School = [
   },
   {
     id: 2,
-    category: 'Schools',
+    category: Labels.school,
+
     contact: 'Graham Ellis',
     headerImg: [
       require('../../assets/images/School.png'),
@@ -377,7 +384,8 @@ export const School = [
   },
   {
     id: 3,
-    category: 'Schools',
+    category: Labels.school,
+
     contact: 'Graham Ellis',
     headerImg: [
       require('../../assets/images/School.png'),
@@ -426,7 +434,8 @@ export const SchoolGroup = [
   {
     id: 1,
     contact: 'Graham Ellis',
-    category: 'Schools',
+    category: Labels.school,
+
     headerImg: [
       require('../../assets/images/School.png'),
       require('../../assets/images/Nursery.png'),
@@ -472,7 +481,8 @@ export const SchoolGroup = [
   {
     id: 2,
     contact: 'Graham Ellis',
-    category: 'Schools',
+    category: Labels.school,
+
     headerImg: [
       require('../../assets/images/School.png'),
       require('../../assets/images/Nursery.png'),
@@ -525,7 +535,7 @@ export const Nannies = [
       require('../../assets/images/Nursery.png'),
     ],
     contact: 'Thavam Sathasivam',
-    category: 'Nannies',
+    category: Labels.nannies,
     name: 'St. George’s Nursery Schools',
     timing: {
       MON: {
@@ -561,7 +571,8 @@ export const Nannies = [
       require('../../assets/images/School.png'),
       require('../../assets/images/Nursery.png'),
     ],
-    category: 'Nannies',
+    category: Labels.nannies,
+
     name: 'Woodcroft Primary School',
     timing: {
       MON: {
@@ -591,7 +602,8 @@ export const Nannies = [
   },
   {
     id: 3,
-    category: 'Nannies',
+    category: Labels.nannies,
+
     headerImg: [
       require('../../assets/images/Nannies.png'),
       require('../../assets/images/School.png'),
@@ -629,7 +641,7 @@ export const Nannies = [
 export const Company = [
   {
     id: 1,
-    category: 'Companies',
+    category: Labels.compamy,
     headerImg: [
       require('../../assets/images/Company.png'),
       require('../../assets/images/School.png'),
@@ -673,7 +685,8 @@ export const Company = [
   },
   {
     id: 2,
-    category: 'Companies',
+    category: Labels.compamy,
+
     contact: 'Graham Ellis',
     headerImg: [
       require('../../assets/images/Company.png'),
@@ -717,7 +730,8 @@ export const Company = [
   },
   {
     id: 3,
-    category: 'Companies',
+    category: Labels.compamy,
+
     contact: 'Graham Ellis',
     headerImg: [
       require('../../assets/images/Company.png'),
@@ -763,7 +777,7 @@ export const Company = [
 export const Tutor = [
   {
     id: 1,
-    category: 'Tutors',
+    category: Labels.tutor,
     headerImg: [
       require('../../assets/images/Tutor.png'),
       require('../../assets/images/Company.png'),
@@ -800,7 +814,8 @@ export const Tutor = [
   },
   {
     id: 2,
-    category: 'Tutors',
+    category: Labels.tutor,
+
     contact: 'Thavam Sathasivam',
     headerImg: [
       require('../../assets/images/Tutor.png'),
@@ -837,7 +852,8 @@ export const Tutor = [
   },
   {
     id: 3,
-    category: 'Tutors',
+    category: Labels.tutor,
+
     headerImg: [
       require('../../assets/images/Tutor.png'),
       require('../../assets/images/Company.png'),

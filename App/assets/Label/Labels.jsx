@@ -1,0 +1,20 @@
+const Labels = {
+  testimonials: 'Testimonials',
+  about_Us: 'About Us',
+  contact_Us: 'Contact us',
+  faq: 'FAQs',
+  filter: 'Filter',
+  map: 'Find on Map',
+  photo_gallery: 'Photo Gallery',
+  event_details: 'Event Details',
+  latest_Review: 'Latest Review',
+  review: 'Review',
+  search: 'Search',
+  more: 'More',
+  nursery: 'Nurseries',
+  school: 'Schools',
+  nannies: 'Nannies',
+  compamy: 'Companies',
+  tutor: 'Tutors',
+};
+export default Labels;

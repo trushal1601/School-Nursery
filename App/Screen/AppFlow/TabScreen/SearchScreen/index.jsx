@@ -15,6 +15,7 @@ import {Dropdown} from 'react-native-element-dropdown';
 import Header from '../../../../Components/Header';
 import {SearchScreenStyle} from './SearchScreenStyle';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
+import Labels from '../../../../assets/Label/Labels';
 
 const SearchScreen = () => {
   const [value, setValue] = useState(null);
@@ -29,7 +30,7 @@ const SearchScreen = () => {
       showsVerticalScrollIndicator={false}
       style={SearchScreenStyle.scrollView}>
       <StatusBar backgroundColor={Colors.Primary} />
-      <Header header={'Search'} showBack={false} />
+      <Header header={Labels.search} showBack={false} />
       <View style={SearchScreenStyle.searchSection}>
         <View style={SearchScreenStyle.searchContainer}>
           <TextInput
@@ -39,17 +40,20 @@ const SearchScreen = () => {
           <Image
             source={require('../../../../assets/images/search.png')}
             style={SearchScreenStyle.searchIcon}
+            tintColor={Colors.DarkGrey}
           />
         </View>
         <Dropdown
           style={SearchScreenStyle.dropdown}
           fontFamily={Fonts.Lexend_Regular}
-          placeholderStyle={{fontSize: Scale(14)}}
+          placeholderStyle={{fontSize: Scale(14), color: Colors.DarkGrey}}
           data={data}
           labelField="label"
           valueField="value"
           placeholder="Search for Nurseries"
           value={value}
+          selectedTextStyle={{fontSize: Scale(13), color: Colors.Black}}
+          itemTextStyle={{fontSize: Scale(12), color: Colors.Black}}
           onChange={item => {
             setValue(item.value);
           }}

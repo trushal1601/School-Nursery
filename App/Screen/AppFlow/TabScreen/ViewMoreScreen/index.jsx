@@ -11,11 +11,12 @@ import Header from '../../../../Components/Header';
 import {ViewMoreData} from '../../../../Components/JsonData/JsonData';
 import {ViewMoreScreenStyle} from './ViewMoreScreenStyle';
 import {date} from 'yup';
+import Labels from '../../../../assets/Label/Labels';
 
 const ViewMoreScreen = ({navigation}) => {
   return (
-    <View style={[ViewMoreScreenStyle.container,{flex:1}]}>
-      <Header header={'More'} showBack={false} />
+    <View style={[ViewMoreScreenStyle.container, {flex: 1}]}>
+      <Header header={Labels.more} showBack={false} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={ViewMoreScreenStyle.sectionContainer}>
           <View style={ViewMoreScreenStyle.listContainer}>
@@ -73,22 +74,30 @@ const ViewMoreScreen = ({navigation}) => {
           </View>
         </View>
         <View style={ViewMoreScreenStyle.socialContainer}>
-          <Image
-            source={require('../../../../assets/images/fb.png')}
-            style={ViewMoreScreenStyle.socialIcon}
-          />
-          <Image
-            source={require('../../../../assets/images/twitter.png')}
-            style={ViewMoreScreenStyle.socialIcon}
-          />
-          <Image
-            source={require('../../../../assets/images/linkdin.png')}
-            style={ViewMoreScreenStyle.socialIcon}
-          />
-          <Image
-            source={require('../../../../assets/images/insta.png')}
-            style={ViewMoreScreenStyle.socialIcon}
-          />
+          <TouchableOpacity>
+            <Image
+              source={require('../../../../assets/images/fb.png')}
+              style={ViewMoreScreenStyle.socialIcon}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image
+              source={require('../../../../assets/images/twitter.png')}
+              style={ViewMoreScreenStyle.socialIcon}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image
+              source={require('../../../../assets/images/linkdin.png')}
+              style={ViewMoreScreenStyle.socialIcon}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image
+              source={require('../../../../assets/images/insta.png')}
+              style={ViewMoreScreenStyle.socialIcon}
+            />
+          </TouchableOpacity>
         </View>
         <View style={ViewMoreScreenStyle.footer}>
           <Text style={ViewMoreScreenStyle.footerText}>

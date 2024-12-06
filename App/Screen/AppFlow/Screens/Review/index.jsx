@@ -7,10 +7,11 @@ import Fonts from '../../../../assets/fonts/Fonts';
 import {AirbnbRating, Rating} from 'react-native-ratings';
 import {ReviewStyle} from './ReviewStyle';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
+import Labels from '../../../../assets/Label/Labels';
 
 const Review = ({navigation, route}) => {
   const {mode, data} = route.params;
-  const headerText = mode === 'more' ? 'Latest Review' : 'Review';
+  const headerText = mode === 'more' ? Labels.latest_Review : Labels.review;
   return (
     <View style={ReviewStyle.container}>
       <Header header={headerText} />

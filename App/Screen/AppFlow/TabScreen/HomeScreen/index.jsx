@@ -1,5 +1,4 @@
 import {
-  FlatList,
   Image,
   ScrollView,
   StatusBar,
@@ -9,7 +8,6 @@ import {
 } from 'react-native';
 import React from 'react';
 import Colors from '../../../../assets/colors/Colors';
-import Fonts from '../../../../assets/fonts/Fonts';
 import {
   HorizontalScroll,
   VerticalScroll,
@@ -25,15 +23,9 @@ import {
   Tutor,
 } from '../../../../Components/JsonData/JsonData';
 import {HomeScreenStyles} from './HomeScreenStyle';
+import Scale from '../../../AuthFlow/ResponsiveScreen';
 
 const HomeScreen = ({navigation}) => {
-  const sliderRender = ({item}) => {
-    return (
-      <View style={HomeScreenStyles.sliderItem}>
-        <Image source={item.img} />
-      </View>
-    );
-  };
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -85,6 +77,7 @@ const HomeScreen = ({navigation}) => {
         <View>
           <HorizontalScroll firstText="Featured Tutors" data={Tutor} />
         </View>
+        <View style={{height: Scale(20)}}></View>
       </View>
     </ScrollView>
   );

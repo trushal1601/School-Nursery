@@ -14,6 +14,7 @@ import Fonts from '../../../../assets/fonts/Fonts';
 import {EventDetail} from '../../../../Components/JsonData/JsonData';
 import {RecentEventDetailStyle} from './RecentEventDetailStyle';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
+import Labels from '../../../../assets/Label/Labels';
 
 const RecentEventDetail = ({route}) => {
   const {event, header} = route.params;
@@ -26,7 +27,7 @@ const RecentEventDetail = ({route}) => {
   return (
     <View style={{backgroundColor: Colors.BackGroundColor, flex: 1}}>
       {header == 'Recent Events' ? (
-        <Header header={'Event Details'} />
+        <Header header={Labels.event_details} />
       ) : (
         <Header header={header} />
       )}
@@ -37,7 +38,7 @@ const RecentEventDetail = ({route}) => {
           style={[
             RecentEventDetailStyle.eventCard,
             {
-              marginBottom: event.img ? Scale(10) : Scale(0),
+              marginBottom:Scale(10),
               gap: event.img ? Scale(10) : Scale(0),
             },
           ]}>

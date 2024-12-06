@@ -2,12 +2,13 @@ import {Dimensions, FlatList, ScrollView, Text, View} from 'react-native';
 import React from 'react';
 import Header from '../../../../Components/Header';
 import {TestimonialStyle} from './TestimonialStyle';
+import Labels from '../../../../assets/Label/Labels';
 
 const Testimonials = ({route}) => {
   const {data} = route.params;
   return (
     <View style={TestimonialStyle.container}>
-      <Header header={'Testimonials'} />
+      <Header header={Labels.testimonials} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <FlatList
           data={data.data}

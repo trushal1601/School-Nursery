@@ -5,6 +5,7 @@ import Header from '../../../../Components/Header';
 import MasonryList from '@react-native-seoul/masonry-list';
 import {PhotoGalleryImg} from '../../../../Components/JsonData/JsonData';
 import {PhotoGalleryStyle} from './PhotoGalleryStyle';
+import Labels from '../../../../assets/Label/Labels';
 
 const PhotoGallery = () => {
   const [data, setData] = useState([]);
@@ -44,7 +45,7 @@ const PhotoGallery = () => {
 
   return (
     <View style={PhotoGalleryStyle.container}>
-      <Header header="Photo Gallery" />
+      <Header header={Labels.photo_gallery} />
       {loading ? (
         <ActivityIndicator
           size="large"

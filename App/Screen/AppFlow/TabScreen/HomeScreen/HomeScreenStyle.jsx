@@ -6,7 +6,7 @@ import Scale from '../../../AuthFlow/ResponsiveScreen';
 export const HomeScreenStyles = StyleSheet.create({
   scrollView: {
     backgroundColor: Colors.BackGroundColor,
-    // marginBottom:Scale(20)
+    flex:1,
   },
   headerContainer: {
     backgroundColor: Colors.Primary,

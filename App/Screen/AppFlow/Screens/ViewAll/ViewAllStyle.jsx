@@ -39,6 +39,7 @@ export const ViewAllStyle = StyleSheet.create({
   searchInput: {
     backgroundColor: '#a477e6',
     fontSize: Scale(14),
+    fontFamily:Fonts.Lexend_Medium,
     paddingHorizontal: Scale(40),
     borderRadius: Scale(10),
     color: Colors.White,

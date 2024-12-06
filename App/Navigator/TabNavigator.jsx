@@ -24,13 +24,17 @@ const TabNavigator = () => {
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
-          // paddingTop: Scale(10),
-          // margin: 10,
-          // borderRadius:20,
           borderTopLeftRadius: Scale(20),
           borderTopRightRadius: Scale(20),
           height: Scale(55),
-          backgroundColor: Colors.BackGroundColor,
+          backgroundColor: Colors.White,
+          // Android shadow
+          elevation: 30,
+          // iOS shadow
+          shadowColor: '#000',
+          shadowOffset: {width: 0, height: -2},
+          shadowOpacity: 0.1,
+          shadowRadius: 10,
         },
       }}>
       <Tab.Screen
@@ -73,7 +77,7 @@ const TabNavigator = () => {
             return (
               <View
                 style={{
-                  marginTop: Scale(-30),
+                  marginTop: Scale(-15),
                   backgroundColor: Colors.Star,
                   borderRadius: Scale(99),
                   padding: Scale(10),

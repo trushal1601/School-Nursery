@@ -12,6 +12,7 @@ export const EventHorizontalCardStyle = StyleSheet.create({
       backgroundColor: Colors.White,
       margin: Scale(10),
       padding: Scale(15),
+      marginHorizontal: Scale(15),
       borderRadius: Scale(19),
       flexDirection: 'row',
       alignItems: 'center',

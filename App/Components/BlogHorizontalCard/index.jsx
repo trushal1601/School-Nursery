@@ -1,4 +1,11 @@
-import {FlatList, Image, Text, TouchableOpacity, View} from 'react-native';
+import {
+  FlatList,
+  Image,
+  SafeAreaView,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import Header from '../Header';
 import Colors from '../../assets/colors/Colors';
@@ -9,7 +16,7 @@ import {BlogHorizontalCardStyle} from './BlogHorizontalCard';
 const HorizontalCard = ({data}) => {
   const navigation = useNavigation();
   return (
-    <>
+    <SafeAreaView style={{flex: 1, backgroundColor: Colors.BackGroundColor}}>
       <Header header={data.name} />
       <FlatList
         data={data.data}
@@ -47,7 +54,7 @@ const HorizontalCard = ({data}) => {
           );
         }}
       />
-    </>
+    </SafeAreaView>
   );
 };
 

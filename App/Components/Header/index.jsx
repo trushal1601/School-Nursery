@@ -14,6 +14,7 @@ const Header = ({header, showBack = true, showClose}) => {
         style={{
           backgroundColor: Colors.Primary,
           padding: Scale(10),
+          paddingHorizontal: Scale(15)
         }}>
         <View
           style={{

@@ -1,17 +1,13 @@
-import {
-  FlatList,
-  Image,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {FlatList, Image, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import Scale from '../../Screen/AuthFlow/ResponsiveScreen';
-import { HomeScreenCompoStyle } from './HomeScreenCompoStyle';
+import {HomeScreenCompoStyle} from './HomeScreenCompoStyle';
 
 export const HorizontalScroll = ({data, firstText}) => {
   const navigation = useNavigation();
   const RenderNursery = ({item}) => {
+    console.log(item.img);
+    
     return (
       <TouchableOpacity
         onPress={() =>
@@ -20,25 +16,35 @@ export const HorizontalScroll = ({data, firstText}) => {
           })
         }
         style={HomeScreenCompoStyle.horizontalItemContainer}>
-        <Image source={item.img} style={HomeScreenCompoStyle.horizontalItemImage} />
+        <Image
+          source={item.img ? item.img : { uri: 'https://fbflipper.com/img/icon.png' }}
+          alt='Img not found'
+          style={HomeScreenCompoStyle.horizontalItemImage}
+        />
         <View style={HomeScreenCompoStyle.horizontalItemTextContainer}>
-          <Text style={HomeScreenCompoStyle.horizontalItemName}>{item.name}</Text>
+          <Text
+            style={HomeScreenCompoStyle.horizontalItemName}
+            numberOfLines={2}>
+            {item.name}
+          </Text>
         </View>
         <Text
           style={[
             HomeScreenCompoStyle.horizontalItemStatus,
-            item.status === 'Open' ? HomeScreenCompoStyle.statusOpen : HomeScreenCompoStyle.statusClosed,
+            item.status === 'Open'
+              ? HomeScreenCompoStyle.statusOpen
+              : HomeScreenCompoStyle.statusClosed,
           ]}>
           {item.status}
         </Text>
         <View style={HomeScreenCompoStyle.horizontalItemIconsContainer}>
           <Image
-            source={require('../../assets/images/Phone.png')}
+            source={require('../../assets/images/phn.png')}
             style={HomeScreenCompoStyle.icon}
           />
           <View style={HomeScreenCompoStyle.divider} />
           <Image
-            source={require('../../assets/images/Map.png')}
+            source={require('../../assets/images/Map1.png')}
             style={HomeScreenCompoStyle.icon}
           />
         </View>
@@ -61,6 +67,7 @@ export const HorizontalScroll = ({data, firstText}) => {
       <FlatList
         data={data}
         renderItem={RenderNursery}
+        contentContainerStyle={{paddingHorizontal: Scale(10)}}
         horizontal
         showsHorizontalScrollIndicator={false}
         keyExtractor={item => item.id.toString()}
@@ -75,27 +82,34 @@ export const VerticalScroll = ({data, firstText}) => {
   const RenderNurseryGroup = ({item}) => {
     return (
       <TouchableOpacity
-        onPress={() =>
-        { 
-         navigation.navigate('details', {
+        onPress={() => {
+          navigation.navigate('details', {
             details: item,
-          })
-        }
-        }
+          });
+        }}
         style={HomeScreenCompoStyle.verticalItemContainer}>
         <View style={HomeScreenCompoStyle.verticalItemHeader}>
-          <Image source={item.img} style={HomeScreenCompoStyle.verticalItemImage} />
+          <Image
+            source={item.img}
+            style={HomeScreenCompoStyle.verticalItemImage}
+          />
           <Text
             style={[
               HomeScreenCompoStyle.verticalItemStatus,
-              item.status === 'Open' ? HomeScreenCompoStyle.statusOpen : HomeScreenCompoStyle.statusClosed,
+              item.status === 'Open'
+                ? HomeScreenCompoStyle.statusOpen
+                : HomeScreenCompoStyle.statusClosed,
             ]}>
             {item.status}
           </Text>
         </View>
         <View style={HomeScreenCompoStyle.verticalItemContent}>
           <View style={HomeScreenCompoStyle.verticalItemTextContainer}>
-            <Text style={HomeScreenCompoStyle.verticalItemName}>{item.name}</Text>
+            <Text
+              style={HomeScreenCompoStyle.verticalItemName}
+              numberOfLines={2}>
+              {item.name}
+            </Text>
           </View>
           <View style={HomeScreenCompoStyle.verticalItemIconsContainer}>
             <Image
@@ -128,13 +142,12 @@ export const VerticalScroll = ({data, firstText}) => {
       <FlatList
         data={data}
         renderItem={RenderNurseryGroup}
+        contentContainerStyle={{paddingHorizontal: Scale(8)}}
         showsVerticalScrollIndicator={false}
         keyExtractor={item => item.id.toString()}
       />
     </View>
   );
 };
-
-
 
 export default VerticalScroll;

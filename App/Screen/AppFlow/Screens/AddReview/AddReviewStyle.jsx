@@ -32,6 +32,7 @@ export const AddReviewStyle = StyleSheet.create({
     },
     featureText: {
       fontFamily: Fonts.Lexend_Medium,
+      color:Colors.Black,
       fontSize: Scale(14),
     },
     formContainer: {
@@ -45,15 +46,15 @@ export const AddReviewStyle = StyleSheet.create({
     formLabel: {
       fontFamily: Fonts.Lexend_Medium,
       color: Colors.DarkGrey,
-      fontSize:Scale(14)
+      fontSize:Scale(12)
     },
     textInput: {
       backgroundColor: Colors.White,
       fontFamily: Fonts.Lexend_Medium,
-      fontSize:Scale(12),
+      fontSize:Scale(14),
       paddingHorizontal: Scale(10),
       borderRadius: Scale(12),
-      marginHorizontal: Scale(5),
+      // marginHorizontal: Scale(5),
     },
     dropdown: {
       padding: Scale(5),
@@ -67,9 +68,9 @@ export const AddReviewStyle = StyleSheet.create({
     textArea: {
       backgroundColor: Colors.White,
       fontFamily: Fonts.Lexend_Medium,
-      fontSize:Scale(12),
+      fontSize:Scale(14),
       paddingHorizontal: Scale(10),
-      marginHorizontal: Scale(5),
+      // marginHorizontal: Scale(5),
       borderRadius: Scale(12),
       height: Scale(100),
       textAlignVertical: 'top',
@@ -89,5 +90,10 @@ export const AddReviewStyle = StyleSheet.create({
       textAlign: 'center',
       fontSize: Scale(16),
       fontFamily: Fonts.Lexend_Medium,
+    },
+    errorText: {
+      color: 'red',
+      fontSize: Scale(12),
+      fontFamily: Fonts.Lexend_Regular,
     },
   });

@@ -17,6 +17,8 @@ import Scale from '../../../AuthFlow/ResponsiveScreen';
 
 const ViewAll = ({navigation, route}) => {
   const state = route.params;
+  console.log(state.state[0].placeholder);
+
   const renderInfo = ({item}) => {
     return (
       <TouchableOpacity
@@ -82,7 +84,7 @@ const ViewAll = ({navigation, route}) => {
           <View style={ViewAllStyle.searchContainer}>
             <View style={ViewAllStyle.searchBox}>
               <TextInput
-                placeholder="Search by name, area or postcode"
+                placeholder={`search for ${state.state[0].category}`}
                 style={ViewAllStyle.searchInput}
                 placeholderTextColor={Colors.White}
               />

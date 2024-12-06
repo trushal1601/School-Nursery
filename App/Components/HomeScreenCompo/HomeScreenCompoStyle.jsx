@@ -9,8 +9,8 @@ export const HomeScreenCompoStyle = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: Scale(8),
-    marginTop:Scale(10)
+    paddingHorizontal: Scale(13),
+    marginTop: Scale(10),
   },
   headerText: {
     fontSize: Scale(16),
@@ -23,8 +23,8 @@ export const HomeScreenCompoStyle = StyleSheet.create({
     // textDecorationLine: 'underline',
   },
   icon: {
-    height: Scale(20),
-    width: Scale(20),
+    height: Scale(18),
+    width: Scale(18),
   },
   divider: {
     borderLeftWidth: Scale(0.5),
@@ -47,10 +47,11 @@ export const HomeScreenCompoStyle = StyleSheet.create({
   horizontalItemContainer: {
     backgroundColor: Colors.White,
     padding: Scale(10),
-    marginTop:Scale(10),
-    marginHorizontal: Scale(10),
-    margin: Scale(2),
+    marginTop: Scale(10),
+    // marginHorizontal: Scale(12),
+    margin: Scale(10),
     borderRadius: Scale(15),
+    width: Scale(150),
     paddingHorizontal: Scale(15),
   },
   horizontalItemImage: {
@@ -68,6 +69,7 @@ export const HomeScreenCompoStyle = StyleSheet.create({
   },
   horizontalItemStatus: {
     padding: Scale(4),
+    fontFamily: Fonts.Lexend_Medium,
     paddingHorizontal: Scale(5),
     fontSize: Scale(12),
     borderRadius: Scale(8),
@@ -86,7 +88,7 @@ export const HomeScreenCompoStyle = StyleSheet.create({
   verticalItemContainer: {
     backgroundColor: Colors.White,
     margin: Scale(8),
-    // marginHorizontal: Scale(10),
+    marginHorizontal: Scale(12),
     padding: Scale(10),
     borderRadius: Scale(19),
   },
@@ -105,6 +107,7 @@ export const HomeScreenCompoStyle = StyleSheet.create({
     padding: Scale(4),
     paddingHorizontal: Scale(5),
     borderRadius: Scale(8),
+    fontFamily: Fonts.Lexend_Medium,
     fontSize: Scale(12),
     alignItems: 'flex-start',
     alignSelf: 'flex-start',
@@ -118,7 +121,7 @@ export const HomeScreenCompoStyle = StyleSheet.create({
     width: Scale(200),
   },
   verticalItemName: {
-    fontSize: Scale(16),
+    fontSize: Scale(14),
     fontFamily: Fonts.Lexend_Medium,
   },
   verticalItemIconsContainer: {

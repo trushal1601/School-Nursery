@@ -19,12 +19,13 @@ export const SearchScreenStyle = StyleSheet.create({
   },
   searchSection: {
     padding: Scale(10),
+    marginHorizontal: Scale(8),
   },
   searchInput: {
     backgroundColor: Colors.White,
     fontSize: Scale(14),
     position: 'relative',
-    fontFamily: Fonts.Lexend_Medium,
+    fontFamily: Fonts.Lexend_Regular,
     paddingHorizontal: Scale(40),
     borderRadius: Scale(12),
   },
@@ -42,7 +43,7 @@ export const SearchScreenStyle = StyleSheet.create({
     borderWidth: null,
     borderRadius: Scale(12),
     paddingHorizontal: Scale(8),
-    paddingVertical: Scale(12),
+    paddingVertical: Scale(11),
     backgroundColor: Colors.White,
   },
   searchButtonContainer: {
@@ -61,7 +62,7 @@ export const SearchScreenStyle = StyleSheet.create({
     color: Colors.White,
     textAlign: 'center',
     fontSize: Scale(16),
-    fontFamily: Fonts.Lexend_Medium,
+    fontFamily: Fonts.Lexend_Regular,
   },
   searchImageContainer: {
     alignItems: 'center',
@@ -69,8 +70,8 @@ export const SearchScreenStyle = StyleSheet.create({
     // justifyContent:'center'
   },
   searchImage: {
-    height: Scale(200),
-    width: Scale(200),
+    height: Scale(150),
+    width: Scale(150),
   },
   searchContainer: {
     flex: 1,

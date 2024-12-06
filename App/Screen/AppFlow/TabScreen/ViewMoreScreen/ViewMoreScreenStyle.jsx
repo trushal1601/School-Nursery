@@ -20,9 +20,10 @@ export const ViewMoreScreenStyle = StyleSheet.create({
   listItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: Scale(12),
+    paddingVertical: Scale(13),
     borderBottomWidth: Scale(0.5),
-    padding: Scale(10),
+    borderColor: Colors.Grey,
+    // padding: Scale(10),
     gap: Scale(20),
     justifyContent: 'space-between',
   },
@@ -31,8 +32,8 @@ export const ViewMoreScreenStyle = StyleSheet.create({
     fontFamily: Fonts.Lexend_Medium,
   },
   nextIcon: {
-    height: Scale(20),
-    width: Scale(20),
+    height: Scale(14),
+    width: Scale(14),
   },
   socialContainer: {
     flexDirection: 'row',

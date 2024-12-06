@@ -5,6 +5,7 @@ import Colors from '../../../../assets/colors/Colors';
 import Collapsible from 'react-native-collapsible';
 import Fonts from '../../../../assets/fonts/Fonts';
 import {FAQStyle} from './FAQStyle';
+import Labels from '../../../../assets/Label/Labels';
 
 const FAQ = ({route}) => {
   const [expanded, setExpanded] = useState([]);
@@ -48,7 +49,7 @@ const FAQ = ({route}) => {
 
   return (
     <View style={FAQStyle.container}>
-      <Header header={'FAQs'} />
+      <Header header={Labels.faq} />
       <FlatList
         data={data.date}
         keyExtractor={item => item.id.toString()}
