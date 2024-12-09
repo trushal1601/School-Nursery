@@ -17,7 +17,7 @@ import Scale from '../../../AuthFlow/ResponsiveScreen';
 
 const ViewAll = ({navigation, route}) => {
   const state = route.params;
-  console.log(state.state[0].placeholder);
+  // console.log(state.state[0].placeholder);
 
   const renderInfo = ({item}) => {
     return (

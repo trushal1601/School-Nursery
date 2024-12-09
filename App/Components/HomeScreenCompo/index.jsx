@@ -6,8 +6,6 @@ import {HomeScreenCompoStyle} from './HomeScreenCompoStyle';
 export const HorizontalScroll = ({data, firstText}) => {
   const navigation = useNavigation();
   const RenderNursery = ({item}) => {
-    console.log(item.img);
-    
     return (
       <TouchableOpacity
         onPress={() =>
@@ -17,8 +15,10 @@ export const HorizontalScroll = ({data, firstText}) => {
         }
         style={HomeScreenCompoStyle.horizontalItemContainer}>
         <Image
-          source={item.img ? item.img : { uri: 'https://fbflipper.com/img/icon.png' }}
-          alt='Img not found'
+          source={
+            item.img ? item.img : {uri: 'https://fbflipper.com/img/icon.png'}
+          }
+          alt="Img not found"
           style={HomeScreenCompoStyle.horizontalItemImage}
         />
         <View style={HomeScreenCompoStyle.horizontalItemTextContainer}>
@@ -78,7 +78,12 @@ export const HorizontalScroll = ({data, firstText}) => {
 
 export const VerticalScroll = ({data, firstText}) => {
   const navigation = useNavigation();
-
+  const getImageSource = img => {
+    if (typeof img === 'string') {
+      return {uri: img};
+    }
+    return img;
+  };
   const RenderNurseryGroup = ({item}) => {
     return (
       <TouchableOpacity
@@ -90,7 +95,7 @@ export const VerticalScroll = ({data, firstText}) => {
         style={HomeScreenCompoStyle.verticalItemContainer}>
         <View style={HomeScreenCompoStyle.verticalItemHeader}>
           <Image
-            source={item.img}
+            source={getImageSource(item.img)}
             style={HomeScreenCompoStyle.verticalItemImage}
           />
           <Text

@@ -10,7 +10,7 @@ import Labels from '../../../../assets/Label/Labels';
 const FAQ = ({route}) => {
   const [expanded, setExpanded] = useState([]);
   const {data} = route.params;
-  console.log(data);
+  // console.log(data);
   
 
   const toggleExpand = id => {

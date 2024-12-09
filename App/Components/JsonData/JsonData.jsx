@@ -189,8 +189,7 @@ export const NurseryGroup = [
         time: 'Close',
       },
     },
-    // img: require('../../assets/images/nurseryG1.png'),
-    img:'https://fbflipper.com/img/icon.png',
+    img: 'https://fbflipper.com/img/icon.png',
     status: 'Open',
   },
   {
