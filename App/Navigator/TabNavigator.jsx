@@ -18,6 +18,12 @@ import Scale from '../Screen/AuthFlow/ResponsiveScreen';
 
 const TabNavigator = () => {
   const Tab = createBottomTabNavigator();
+  const getImageSource = img => {
+    if (typeof img === 'string') {
+      return {uri: img};
+    }
+    return img;
+  };
   return (
     <Tab.Navigator
       initialRouteName="home"
@@ -84,7 +90,7 @@ const TabNavigator = () => {
                   alignItems: ' ',
                 }}>
                 <Image
-                  source={require('../assets/images/search.png')}
+                  source={getImageSource(require('../assets/images/search.png'))}
                   style={{width: Scale(25), height: Scale(25)}}
                   tintColor={'white'}
                 />

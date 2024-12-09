@@ -13,6 +13,13 @@ const PhotoGallery = () => {
   const [loading, setLoading] = useState(true);
   const [loadingMore, setLoadingMore] = useState(false);
 
+  const getImageSource = img => {
+    if (typeof img === 'string') {
+      return {uri: img};
+    }
+    return img;
+  };
+
   useEffect(() => {
     loadMoreData();
   }, []);
@@ -39,7 +46,7 @@ const PhotoGallery = () => {
 
   const renderItem = ({item}) => (
     <View style={PhotoGalleryStyle.imageContainer}>
-      <Image source={item.img} style={PhotoGalleryStyle.image} />
+      <Image source={getImageSource(item.img)} style={PhotoGalleryStyle.image} />
     </View>
   );
 

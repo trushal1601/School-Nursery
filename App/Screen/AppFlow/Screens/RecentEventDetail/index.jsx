@@ -24,6 +24,13 @@ const RecentEventDetail = ({route}) => {
     setExpandedId(!expandedId);
   };
 
+  const getImageSource = img => {
+    if (typeof img === 'string') {
+      return {uri: img};
+    }
+    return img;
+  };
+
   return (
     <View style={{backgroundColor: Colors.BackGroundColor, flex: 1}}>
       {header == 'Recent Events' ? (
@@ -42,7 +49,7 @@ const RecentEventDetail = ({route}) => {
               gap: event.img ? Scale(10) : Scale(0),
             },
           ]}>
-          <Image source={event.img} style={RecentEventDetailStyle.eventImage} />
+          <Image source={getImageSource(event.img)} style={RecentEventDetailStyle.eventImage} />
           <View style={RecentEventDetailStyle.textContainer}>
             <Text style={RecentEventDetailStyle.eventDate}>{event.date}</Text>
             <Text style={RecentEventDetailStyle.eventHeader}>

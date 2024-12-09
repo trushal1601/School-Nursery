@@ -12,7 +12,12 @@ import { useNavigation } from '@react-navigation/native';
 import Header from '../Header';
 import { EventHorizontalCardStyle } from './EventHorizontalCardStyle';
 const EventHorizontalCard = ({data}) => {
-  
+  const getImageSource = img => {
+    if (typeof img === 'string') {
+      return {uri: img};
+    }
+    return img;
+  };
     const navigation = useNavigation()
   return (
     <View style={EventHorizontalCardStyle.container}>
@@ -28,7 +33,7 @@ const EventHorizontalCard = ({data}) => {
                 })
               }
               style={[EventHorizontalCardStyle.eventCard, {gap: item.img ? 20 : 0}]}>
-              <Image source={item.img} style={EventHorizontalCardStyle.eventImage} />
+              <Image source={getImageSource(item.img)} style={EventHorizontalCardStyle.eventImage} />
               <View style={EventHorizontalCardStyle.textContainer}>
                 <Text style={EventHorizontalCardStyle.eventDate}>{item.date}</Text>
                 <Text style={EventHorizontalCardStyle.eventHeader}>{item.header}</Text>

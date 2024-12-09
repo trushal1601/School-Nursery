@@ -7,6 +7,12 @@ import Scale from '../../Screen/AuthFlow/ResponsiveScreen';
 
 const Header = ({header, showBack = true, showClose}) => {
   const navigation = useNavigation();
+  const getImageSource = img => {
+    if (typeof img === 'string') {
+      return {uri: img};
+    }
+    return img;
+  };
   return (
     <View>
       <StatusBar backgroundColor={Colors.Primary} />
@@ -14,7 +20,7 @@ const Header = ({header, showBack = true, showClose}) => {
         style={{
           backgroundColor: Colors.Primary,
           padding: Scale(10),
-          paddingHorizontal: Scale(15)
+          paddingHorizontal: Scale(15),
         }}>
         <View
           style={{
@@ -25,7 +31,7 @@ const Header = ({header, showBack = true, showClose}) => {
           {showBack ? (
             <TouchableOpacity onPress={() => navigation.goBack()}>
               <Image
-                source={require('../../assets/images/back.png')}
+                source={getImageSource(require('../../assets/images/back.png'))}
                 style={{height: Scale(20), width: Scale(20)}}
                 tintColor={Colors.White}
               />
@@ -44,13 +50,15 @@ const Header = ({header, showBack = true, showClose}) => {
           {showClose ? (
             <TouchableOpacity onPress={() => navigation.goBack()}>
               <Image
-                source={require('../../assets/images/close.png')}
+                source={getImageSource(
+                  require('../../assets/images/close.png'),
+                )}
                 style={{height: Scale(25), width: Scale(25)}}
                 tintColor={Colors.White}
               />
             </TouchableOpacity>
           ) : (
-            <View /> 
+            <View />
           )}
         </View>
       </View>

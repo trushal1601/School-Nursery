@@ -7,6 +7,12 @@ import RenderHtml from 'react-native-render-html';
 import {BlogDetailsStyle} from './BlogDetailsStyle';
 
 const BlogDetails = ({route}) => {
+  const getImageSource = img => {
+    if (typeof img === 'string') {
+      return {uri: img};
+    }
+    return img;
+  };
   const source = {
     html: `
   <p style='text-align:center;'>
@@ -24,12 +30,12 @@ const BlogDetails = ({route}) => {
       <View style={BlogDetailsStyle.contentContainer}>
         {header == 'Blogs' ? (
           <Image
-            source={require('../../assets/images/blog.png')}
+            source={getImageSource(require('../../assets/images/blog.png'))}
             style={BlogDetailsStyle.blogImage}
           />
         ) : (
           <Image
-            source={require('../../assets/images/Parent.png')}
+            source={getImageSource(require('../../assets/images/Parent.png'))}
             style={BlogDetailsStyle.blogImage}
           />
         )}

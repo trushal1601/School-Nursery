@@ -15,6 +15,12 @@ import {BlogHorizontalCardStyle} from './BlogHorizontalCard';
 
 const HorizontalCard = ({data}) => {
   const navigation = useNavigation();
+  const getImageSource = img => {
+    if (typeof img === 'string') {
+      return {uri: img};
+    }
+    return img;
+  };
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: Colors.BackGroundColor}}>
       <Header header={data.name} />
@@ -33,7 +39,7 @@ const HorizontalCard = ({data}) => {
               style={BlogHorizontalCardStyle.blogCard}>
               <View style={BlogHorizontalCardStyle.imageContainer}>
                 <Image
-                  source={item.img}
+                  source={getImageSource(item.img)}
                   style={BlogHorizontalCardStyle.blogImage}
                 />
                 {data.name == 'Blogs' && (

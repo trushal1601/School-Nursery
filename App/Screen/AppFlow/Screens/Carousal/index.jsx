@@ -13,6 +13,13 @@ const Carousel = () => {
   const carouselRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const getImageSource = img => {
+    if (typeof img === 'string') {
+      return {uri: img};
+    }
+    return img;
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex(prevIndex => {
@@ -55,7 +62,7 @@ const Carousel = () => {
         {item.text}
       </Text>
       <Image
-        source={item.img}
+        source={getImageSource(item.img)}
         style={{height: Scale(120), width: Scale(120)}}
       />
     </View>

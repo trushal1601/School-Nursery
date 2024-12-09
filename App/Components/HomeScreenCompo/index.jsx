@@ -5,6 +5,12 @@ import {HomeScreenCompoStyle} from './HomeScreenCompoStyle';
 
 export const HorizontalScroll = ({data, firstText}) => {
   const navigation = useNavigation();
+  const getImageSource = img => {
+    if (typeof img === 'string') {
+      return {uri: img};
+    }
+    return img;
+  };
   const RenderNursery = ({item}) => {
     return (
       <TouchableOpacity
@@ -15,9 +21,7 @@ export const HorizontalScroll = ({data, firstText}) => {
         }
         style={HomeScreenCompoStyle.horizontalItemContainer}>
         <Image
-          source={
-            item.img ? item.img : {uri: 'https://fbflipper.com/img/icon.png'}
-          }
+          source={getImageSource(item.img)}
           alt="Img not found"
           style={HomeScreenCompoStyle.horizontalItemImage}
         />
@@ -39,12 +43,12 @@ export const HorizontalScroll = ({data, firstText}) => {
         </Text>
         <View style={HomeScreenCompoStyle.horizontalItemIconsContainer}>
           <Image
-            source={require('../../assets/images/phn.png')}
+            source={getImageSource(require('../../assets/images/phn.png'))}
             style={HomeScreenCompoStyle.icon}
           />
           <View style={HomeScreenCompoStyle.divider} />
           <Image
-            source={require('../../assets/images/Map1.png')}
+            source={getImageSource(require('../../assets/images/Map1.png'))}
             style={HomeScreenCompoStyle.icon}
           />
         </View>
@@ -118,12 +122,12 @@ export const VerticalScroll = ({data, firstText}) => {
           </View>
           <View style={HomeScreenCompoStyle.verticalItemIconsContainer}>
             <Image
-              source={require('../../assets/images/Phone.png')}
+              source={getImageSource(require('../../assets/images/Phone.png'))}
               style={HomeScreenCompoStyle.icon}
             />
             <View style={HomeScreenCompoStyle.dividerVertical} />
             <Image
-              source={require('../../assets/images/Map.png')}
+              source={getImageSource(require('../../assets/images/Map.png'))}
               style={HomeScreenCompoStyle.icon}
             />
           </View>

@@ -32,6 +32,13 @@ const Details = ({route, navigation}) => {
     setExpandedId(!expandedId);
   };
 
+  const getImageSource = img => {
+    if (typeof img === 'string') {
+      return {uri: img};
+    }
+    return img;
+  };
+
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     setCurrentIndex(prevIndex => {
@@ -75,7 +82,10 @@ const Details = ({route, navigation}) => {
             showsHorizontalScrollIndicator={false}
             renderItem={({item}) => (
               <View style={DetailsStyle.imageContainer}>
-                <Image source={item} style={DetailsStyle.image} />
+                <Image
+                  source={getImageSource(item)}
+                  style={DetailsStyle.image}
+                />
               </View>
             )}
             keyExtractor={(item, index) => index.toString()}
@@ -86,7 +96,10 @@ const Details = ({route, navigation}) => {
             <View
               style={{flexDirection: 'row', justifyContent: 'space-between'}}>
               <View style={{gap: Scale(5)}}>
-                <Image source={details.img} style={DetailsStyle.companyLogo} />
+                <Image
+                  source={getImageSource(details.img)}
+                  style={DetailsStyle.companyLogo}
+                />
                 <View style={DetailsStyle.companyName}>
                   <Text style={DetailsStyle.companyNameText}>
                     {details.name}
@@ -126,13 +139,17 @@ const Details = ({route, navigation}) => {
                 </View>
                 <View style={DetailsStyle.phoneMapContainer}>
                   <Image
-                    source={require('../../../../assets/images/Phone.png')}
+                    source={getImageSource(
+                      require('../../../../assets/images/Phone.png'),
+                    )}
                     style={DetailsStyle.phoneMapImg}
                   />
                   <View style={DetailsStyle.mapContainer} />
                   <TouchableOpacity onPress={() => navigation.navigate('map')}>
                     <Image
-                      source={require('../../../../assets/images/Map.png')}
+                      source={getImageSource(
+                        require('../../../../assets/images/Map.png'),
+                      )}
                       style={DetailsStyle.phoneMapImg}
                     />
                   </TouchableOpacity>
@@ -240,7 +257,9 @@ const Details = ({route, navigation}) => {
                 style={[DetailsStyle.featureContainer, {padding: Scale(15)}]}>
                 <View style={DetailsStyle.featureSubContainer}>
                   <Image
-                    source={require('../../../../assets/images/Visiting.png')}
+                    source={getImageSource(
+                      require('../../../../assets/images/Visiting.png'),
+                    )}
                     style={DetailsStyle.visitImg}
                   />
                   <Text style={DetailsStyle.headerText}>Visiting</Text>

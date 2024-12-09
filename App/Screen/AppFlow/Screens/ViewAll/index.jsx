@@ -19,6 +19,13 @@ const ViewAll = ({navigation, route}) => {
   const state = route.params;
   // console.log(state.state[0].placeholder);
 
+  const getImageSource = img => {
+    if (typeof img === 'string') {
+      return {uri: img};
+    }
+    return img;
+  };
+
   const renderInfo = ({item}) => {
     return (
       <TouchableOpacity
@@ -27,7 +34,7 @@ const ViewAll = ({navigation, route}) => {
         }}
         style={ViewAllStyle.card}>
         <View style={ViewAllStyle.cardHeader}>
-          <Image source={item.img} style={ViewAllStyle.cardImage} />
+          <Image source={getImageSource(item.img)} style={ViewAllStyle.cardImage} />
           <Text
             style={[
               ViewAllStyle.status,
