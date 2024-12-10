@@ -893,31 +893,31 @@ export const SliderData = [
   {
     id: '1',
     text: 'Looking for childcare or a school? ',
-    img: require('../../assets/images/Group.png'),
+    img: require('../../assets/images/Carousal.png'),
     bgColor: '#31459C',
   },
   {
     id: '2',
     text: 'Looking for childcare or a school? ',
-    img: require('../../assets/images/Group.png'),
+    img: require('../../assets/images/Carousal.png'),
     bgColor: '#FFC823',
   },
   {
     id: '3',
     text: 'Looking for childcare or a school? ',
-    img: require('../../assets/images/Group.png'),
+    img: 'https://fbflipper.com/img/icon.png',
     bgColor: Colors.Primary,
   },
   {
     id: '4',
     text: 'Looking for childcare or a school? ',
-    img: require('../../assets/images/Group.png'),
+    img: require('../../assets/images/Carousal.png'),
     bgColor: '#31459C',
   },
   {
     id: '5',
     text: 'Looking for childcare or a school? ',
-    img: require('../../assets/images/Group.png'),
+    img: 'https://picsum.photos/id/237/200/300',
     bgColor: '#FFC823',
   },
 ];
@@ -1482,3 +1482,29 @@ export const EventDetail = {
     },
   ],
 };
+
+export const ReduxData=[
+  {
+      name:"samsung",
+      price:30000,
+      img:require("../../assets/images/Phone.jpeg")
+  },
+  {
+      name:"samsung23",
+      price:40000,
+      img:require("../../assets/images/Phone2.jpeg")
+  }, {
+      name:"samsung21",
+      price:50000,
+      img:require("../../assets/images/Phone.jpeg")
+  }, {
+      name:"samsung31",
+      price:60000,
+      img:require("../../assets/images/Phone2.jpeg")
+  }, {
+      name:"samsung24",
+      price:10000,
+      img:require("../../assets/images/Phone.jpeg")
+  },
+
+]

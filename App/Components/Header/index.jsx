@@ -20,7 +20,7 @@ const Header = ({header, showBack = true, showClose}) => {
         style={{
           backgroundColor: Colors.Primary,
           padding: Scale(10),
-          paddingHorizontal: Scale(15),
+          // paddingHorizontal: Scale(15),
         }}>
         <View
           style={{
@@ -44,7 +44,8 @@ const Header = ({header, showBack = true, showClose}) => {
               fontFamily: Fonts.Lexend_Medium,
               color: Colors.White,
               fontSize: Scale(20),
-            }}>
+            }}
+            numberOfLines={1}>
             {header}
           </Text>
           {showClose ? (

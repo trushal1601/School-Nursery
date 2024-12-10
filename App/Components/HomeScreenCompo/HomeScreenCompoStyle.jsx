@@ -9,7 +9,7 @@ export const HomeScreenCompoStyle = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: Scale(13),
+    paddingHorizontal: Scale(18),
     marginTop: Scale(10),
   },
   headerText: {
@@ -88,7 +88,7 @@ export const HomeScreenCompoStyle = StyleSheet.create({
   verticalItemContainer: {
     backgroundColor: Colors.White,
     margin: Scale(8),
-    marginHorizontal: Scale(12),
+    marginHorizontal: Scale(15),
     padding: Scale(10),
     borderRadius: Scale(19),
   },

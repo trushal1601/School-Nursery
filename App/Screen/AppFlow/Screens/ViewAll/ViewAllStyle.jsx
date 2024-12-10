@@ -6,7 +6,7 @@ import Scale from '../../../AuthFlow/ResponsiveScreen';
 export const ViewAllStyle = StyleSheet.create({
   container: {
     backgroundColor: Colors.BackGroundColor,
-    flex:1
+    flex: 1,
   },
   header: {
     backgroundColor: Colors.Primary,
@@ -39,7 +39,7 @@ export const ViewAllStyle = StyleSheet.create({
   searchInput: {
     backgroundColor: '#a477e6',
     fontSize: Scale(14),
-    fontFamily:Fonts.Lexend_Medium,
+    fontFamily: Fonts.Lexend_Medium,
     paddingHorizontal: Scale(40),
     borderRadius: Scale(10),
     color: Colors.White,
@@ -83,7 +83,8 @@ export const ViewAllStyle = StyleSheet.create({
   status: {
     padding: Scale(4),
     borderRadius: Scale(8),
-    fontSize:Scale(12),
+    fontSize: Scale(12),
+    fontFamily: Fonts.Lexend_Medium,
     alignSelf: 'flex-start',
   },
   statusOpen: {
@@ -116,7 +117,7 @@ export const ViewAllStyle = StyleSheet.create({
     width: Scale(170),
     fontFamily: Fonts.Lexend_Regular,
     color: Colors.DarkGrey,
-    fontSize:Scale(12)
+    fontSize: Scale(12),
   },
   emailButton: {
     backgroundColor: Colors.Primary,
@@ -128,6 +129,6 @@ export const ViewAllStyle = StyleSheet.create({
     paddingHorizontal: Scale(5),
     fontFamily: Fonts.Lexend_Medium,
     textAlign: 'center',
-    fontSize:Scale(12)
+    fontSize: Scale(12),
   },
 });

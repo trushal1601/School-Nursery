@@ -116,6 +116,7 @@ const ViewAll = ({navigation, route}) => {
         <FlatList
           data={state?.state}
           renderItem={renderInfo}
+          contentContainerStyle={{marginHorizontal: Scale(5)}}
           keyExtractor={item => item.id}
         />
       </ScrollView>

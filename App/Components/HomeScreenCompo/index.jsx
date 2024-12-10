@@ -71,7 +71,7 @@ export const HorizontalScroll = ({data, firstText}) => {
       <FlatList
         data={data}
         renderItem={RenderNursery}
-        contentContainerStyle={{paddingHorizontal: Scale(10)}}
+        contentContainerStyle={{paddingHorizontal: Scale(5)}}
         horizontal
         showsHorizontalScrollIndicator={false}
         keyExtractor={item => item.id.toString()}
@@ -151,7 +151,7 @@ export const VerticalScroll = ({data, firstText}) => {
       <FlatList
         data={data}
         renderItem={RenderNurseryGroup}
-        contentContainerStyle={{paddingHorizontal: Scale(8)}}
+        contentContainerStyle={{}}
         showsVerticalScrollIndicator={false}
         keyExtractor={item => item.id.toString()}
       />

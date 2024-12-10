@@ -44,26 +44,10 @@ const Carousel = () => {
   }, []);
 
   const renderItem = ({item}) => (
-    <View
-      style={[
-        CarousalStyle.slide,
-        {
-          backgroundColor: item.bgColor,
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-          alignItems: 'center',
-        },
-      ]}>
-      <Text
-        style={[
-          CarousalStyle.slideText,
-          {width: Scale(150), fontFamily: Fonts.Lexend_Medium},
-        ]}>
-        {item.text}
-      </Text>
+    <View style={[CarousalStyle.slide]}>
       <Image
         source={getImageSource(item.img)}
-        style={{height: Scale(120), width: Scale(120)}}
+        style={{height: Scale(120), width: '70%'}}
       />
     </View>
   );

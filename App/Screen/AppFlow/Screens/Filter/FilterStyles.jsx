@@ -41,6 +41,13 @@ export const FilterStyle = StyleSheet.create({
     position: 'absolute',
     bottom: Scale(0),
     width: '100%',
+    // Android shadow
+    elevation: 30,
+    // iOS shadow
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: -2},
+    shadowOpacity: 0.1,
+    shadowRadius: 10,
   },
   resetButton: {
     backgroundColor: Colors.White,

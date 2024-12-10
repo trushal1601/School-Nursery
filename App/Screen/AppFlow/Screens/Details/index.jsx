@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import Header from '../../../../Components/Header';
 import Fonts from '../../../../assets/fonts/Fonts';
 import Colors from '../../../../assets/colors/Colors';

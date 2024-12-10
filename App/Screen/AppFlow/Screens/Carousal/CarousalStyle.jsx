@@ -9,14 +9,14 @@ export const CarousalStyle = StyleSheet.create({
     marginVertical: 20,
   },
   slide: {
-    width: screenWidth * 0.9,
-    paddingVertical: 15,
+    width: screenWidth * 0.93,
+    // paddingVertical: 15,
     justifyContent: 'space-around',
     alignItems: 'center',
-    backgroundColor: 'lightgrey',
+    backgroundColor: '#31459c',
     borderRadius: 10,
-    marginHorizontal: 20,
-    height:Scale(150)
+    marginHorizontal: 14,
+    height: Scale(150),
   },
   slideText: {
     fontSize: Scale(18),

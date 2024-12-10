@@ -46,7 +46,10 @@ const PhotoGallery = () => {
 
   const renderItem = ({item}) => (
     <View style={PhotoGalleryStyle.imageContainer}>
-      <Image source={getImageSource(item.img)} style={PhotoGalleryStyle.image} />
+      <Image
+        source={getImageSource(item.img)}
+        style={PhotoGalleryStyle.image}
+      />
     </View>
   );
 

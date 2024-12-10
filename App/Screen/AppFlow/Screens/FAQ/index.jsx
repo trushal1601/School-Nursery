@@ -8,21 +8,15 @@ import {FAQStyle} from './FAQStyle';
 import Labels from '../../../../assets/Label/Labels';
 
 const FAQ = ({route}) => {
-  const [expanded, setExpanded] = useState([]);
+  const [expanded, setExpanded] = useState(null);
   const {data} = route.params;
-  // console.log(data);
-  
 
   const toggleExpand = id => {
-    setExpanded(
-      expanded.includes(id)
-        ? expanded.filter(item => item !== id)
-        : [...expanded, id],
-    );
+    setExpanded(expanded === id ? null : id);
   };
 
   const renderItem = ({item}) => {
-    const isExpanded = expanded.includes(item.id);
+    const isExpanded = expanded === item.id;
     return (
       <View style={FAQStyle.faqContainer}>
         <TouchableOpacity
