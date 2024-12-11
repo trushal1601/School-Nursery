@@ -1,17 +1,28 @@
-import {Button, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {
+  Button,
+  FlatList,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import React, {useState} from 'react';
 import Header from '../../../../Components/Header';
 import Labels from '../../../../assets/Label/Labels';
 import {useDispatch, useSelector} from 'react-redux';
-import {addition, substraction} from '../../../../store/Action';
+import {addition, substraction, addToCart} from '../../../../store/Action';
 import Fonts from '../../../../assets/fonts/Fonts';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
 import {ReduxData} from '../../../../Components/JsonData/JsonData';
 import {Image} from 'react-native';
+import Colors from '../../../../assets/colors/Colors';
+import ReduxHeader from '../../../../store/UI/ReduxHeader';
+import Product from '../../../../store/UI/Product';
 
 const Map = () => {
   const dispatch = useDispatch();
   const data = useSelector(state => state.counter);
+ 
   return (
     <View style={{flex: 1}}>
       <Header header={Labels.map} showBack={false} showClose={true} />
@@ -33,32 +44,16 @@ const Map = () => {
           title="Decrement"></Button>
       </View>
       <View style={{flex: 1, backgroundColor: 'white'}}>
-        {/* <View style={{height: 50, width: '100%', backgroundColor: '#fcec08'}}>
-        <Text style={{fontSize: 30, textAlign: 'right', paddingRight: 10}}>
-          {value}
-        </Text>
-      </View> */}
-        <ScrollView>
-          {ReduxData.map((item, index) => (
-            <View
-              key={index}
-              style={{
-                borderBottomWidth: 1,
-                alignItems: 'center',
-                paddingVertical: 25,
-              }}>
-              <Image
-                source={item.img}
-                style={{height: 100, width: 100}}
-                resizeMode="contain"
-              />
-              <Text style={{fontSize: 18}}>{item.name}</Text>
-              <Text style={{paddingBottom: 10, fontSize: 18}}>
-                {item.price}
-              </Text>
-              <Button title="Add to Cart" />
-            </View>
-          ))}
+        <ReduxHeader/>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <FlatList
+            data={ReduxData}
+            renderItem={({item, index}) => {
+              return (
+               <Product item={item} index={index}/>
+              );
+            }}
+          />
         </ScrollView>
       </View>
     </View>

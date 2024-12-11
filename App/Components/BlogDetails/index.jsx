@@ -5,6 +5,7 @@ import Colors from '../../assets/colors/Colors';
 import Header from '../Header';
 import RenderHtml from 'react-native-render-html';
 import {BlogDetailsStyle} from './BlogDetailsStyle';
+import { Images } from '../../assets/images/Images';
 
 const BlogDetails = ({route}) => {
   const getImageSource = img => {
@@ -30,12 +31,12 @@ const BlogDetails = ({route}) => {
       <View style={BlogDetailsStyle.contentContainer}>
         {header == 'Blogs' ? (
           <Image
-            source={getImageSource(require('../../assets/images/blog.png'))}
+            source={getImageSource(Images.blog_img)}
             style={BlogDetailsStyle.blogImage}
           />
         ) : (
           <Image
-            source={getImageSource(require('../../assets/images/Parent.png'))}
+            source={getImageSource(Images.parent_img)}
             style={BlogDetailsStyle.blogImage}
           />
         )}

@@ -1,4 +1,5 @@
-import {createStore} from 'redux'
+import {createStore,applyMiddleware} from 'redux'
 import {mainReducer} from './Recuder'
+import rootReducer from './RootReducer'
  
-export const store = createStore(mainReducer)
+export const store = createStore(rootReducer)

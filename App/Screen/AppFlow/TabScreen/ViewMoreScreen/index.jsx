@@ -12,6 +12,7 @@ import {ViewMoreData} from '../../../../Components/JsonData/JsonData';
 import {ViewMoreScreenStyle} from './ViewMoreScreenStyle';
 import {date} from 'yup';
 import Labels from '../../../../assets/Label/Labels';
+import { Images } from '../../../../assets/images/Images';
 
 const ViewMoreScreen = ({navigation}) => {
   return (
@@ -39,7 +40,7 @@ const ViewMoreScreen = ({navigation}) => {
                       {item.name}
                     </Text>
                     <Image
-                      source={require('../../../../assets/images/Next.png')}
+                      source={Images.next_icon}
                       style={ViewMoreScreenStyle.nextIcon}
                     />
                   </TouchableOpacity>
@@ -64,7 +65,7 @@ const ViewMoreScreen = ({navigation}) => {
                       {item.name}
                     </Text>
                     <Image
-                      source={require('../../../../assets/images/Next.png')}
+                      source={Images.next_icon}
                       style={ViewMoreScreenStyle.nextIcon}
                     />
                   </TouchableOpacity>
@@ -76,25 +77,25 @@ const ViewMoreScreen = ({navigation}) => {
         <View style={ViewMoreScreenStyle.socialContainer}>
           <TouchableOpacity>
             <Image
-              source={require('../../../../assets/images/fb.png')}
+              source={Images.fb_icon}
               style={ViewMoreScreenStyle.socialIcon}
             />
           </TouchableOpacity>
           <TouchableOpacity>
             <Image
-              source={require('../../../../assets/images/twitter.png')}
+              source={Images.twitter_icon}
               style={ViewMoreScreenStyle.socialIcon}
             />
           </TouchableOpacity>
           <TouchableOpacity>
             <Image
-              source={require('../../../../assets/images/linkdin.png')}
+              source={Images.linkIn_icon}
               style={ViewMoreScreenStyle.socialIcon}
             />
           </TouchableOpacity>
           <TouchableOpacity>
             <Image
-              source={require('../../../../assets/images/insta.png')}
+              source={Images.insta_icon}
               style={ViewMoreScreenStyle.socialIcon}
             />
           </TouchableOpacity>

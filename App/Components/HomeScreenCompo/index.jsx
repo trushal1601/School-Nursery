@@ -2,6 +2,7 @@ import {FlatList, Image, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import Scale from '../../Screen/AuthFlow/ResponsiveScreen';
 import {HomeScreenCompoStyle} from './HomeScreenCompoStyle';
+import {Images} from '../../assets/images/Images';
 
 export const HorizontalScroll = ({data, firstText}) => {
   const navigation = useNavigation();
@@ -43,12 +44,12 @@ export const HorizontalScroll = ({data, firstText}) => {
         </Text>
         <View style={HomeScreenCompoStyle.horizontalItemIconsContainer}>
           <Image
-            source={getImageSource(require('../../assets/images/phn.png'))}
+            source={getImageSource(Images.phone_icon)}
             style={HomeScreenCompoStyle.icon}
           />
           <View style={HomeScreenCompoStyle.divider} />
           <Image
-            source={getImageSource(require('../../assets/images/Map1.png'))}
+            source={getImageSource(Images.map_icon)}
             style={HomeScreenCompoStyle.icon}
           />
         </View>
@@ -122,12 +123,12 @@ export const VerticalScroll = ({data, firstText}) => {
           </View>
           <View style={HomeScreenCompoStyle.verticalItemIconsContainer}>
             <Image
-              source={getImageSource(require('../../assets/images/Phone.png'))}
+              source={getImageSource(Images.phone_icon)}
               style={HomeScreenCompoStyle.icon}
             />
             <View style={HomeScreenCompoStyle.dividerVertical} />
             <Image
-              source={getImageSource(require('../../assets/images/Map.png'))}
+              source={getImageSource(Images.map_icon)}
               style={HomeScreenCompoStyle.icon}
             />
           </View>

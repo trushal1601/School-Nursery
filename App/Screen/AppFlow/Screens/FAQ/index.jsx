@@ -6,6 +6,7 @@ import Collapsible from 'react-native-collapsible';
 import Fonts from '../../../../assets/fonts/Fonts';
 import {FAQStyle} from './FAQStyle';
 import Labels from '../../../../assets/Label/Labels';
+import { Images } from '../../../../assets/images/Images';
 
 const FAQ = ({route}) => {
   const [expanded, setExpanded] = useState(null);
@@ -26,8 +27,8 @@ const FAQ = ({route}) => {
           <Image
             source={
               isExpanded
-                ? require('../../../../assets/images/up-arrow.png')
-                : require('../../../../assets/images/drop-down.png')
+                ? Images.up_arrow
+                : Images.down_arrow
             }
             style={FAQStyle.icon}
           />

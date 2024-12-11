@@ -13,6 +13,7 @@ import Fonts from '../../../../assets/fonts/Fonts';
 import {FilterData} from '../../../../Components/JsonData/JsonData';
 import {FilterStyle} from './FilterStyles';
 import Labels from '../../../../assets/Label/Labels';
+import { Images } from '../../../../assets/images/Images';
 
 const Filter = ({navigation}) => {
   const [checkedItems, setCheckedItems] = useState({});
@@ -36,12 +37,12 @@ const Filter = ({navigation}) => {
         {checkedItems[item.id] ? (
           <Image
             style={FilterStyle.checkbox}
-            source={require('../../../../assets/images/Checked.png')}
+            source={Images.checked_img}
           />
         ) : (
           <Image
             style={FilterStyle.checkbox}
-            source={require('../../../../assets/images/square.png')}
+            source={Images.unchecked_img}
           />
         )}
       </TouchableOpacity>

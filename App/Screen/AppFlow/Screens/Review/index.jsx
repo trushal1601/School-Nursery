@@ -8,6 +8,7 @@ import {AirbnbRating, Rating} from 'react-native-ratings';
 import {ReviewStyle} from './ReviewStyle';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
 import Labels from '../../../../assets/Label/Labels';
+import { Images } from '../../../../assets/images/Images';
 
 const Review = ({navigation, route}) => {
   const {mode, data} = route.params;
@@ -59,7 +60,7 @@ const Review = ({navigation, route}) => {
             navigation.navigate('addReview', {mode: 'add'});
           }}>
           <Image
-            source={require('../../../../assets/images/Add.png')}
+            source={Images.add_icon}
             style={ReviewStyle.addButton}
           />
         </TouchableOpacity>

@@ -16,6 +16,7 @@ import Header from '../../../../Components/Header';
 import {SearchScreenStyle} from './SearchScreenStyle';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
 import Labels from '../../../../assets/Label/Labels';
+import { Images } from '../../../../assets/images/Images';
 
 const SearchScreen = () => {
   const [value, setValue] = useState(null);
@@ -38,7 +39,7 @@ const SearchScreen = () => {
             style={SearchScreenStyle.searchInput}
           />
           <Image
-            source={require('../../../../assets/images/search.png')}
+            source={Images.search_icon}
             style={SearchScreenStyle.searchIcon}
             tintColor={Colors.DarkGrey}
           />
@@ -64,7 +65,7 @@ const SearchScreen = () => {
           </TouchableOpacity>
         </View>
         <View style={SearchScreenStyle.searchImageContainer}>
-          <Image source={searchImg} style={SearchScreenStyle.searchImage} />
+          <Image source={Images.search_img} style={SearchScreenStyle.searchImage} />
         </View>
       </View>
     </ScrollView>

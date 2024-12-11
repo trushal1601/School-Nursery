@@ -4,6 +4,7 @@ import Colors from '../../assets/colors/Colors';
 import Fonts from '../../assets/fonts/Fonts';
 import {useNavigation} from '@react-navigation/native';
 import Scale from '../../Screen/AuthFlow/ResponsiveScreen';
+import {Images} from '../../assets/images/Images';
 
 const Header = ({header, showBack = true, showClose}) => {
   const navigation = useNavigation();
@@ -31,7 +32,7 @@ const Header = ({header, showBack = true, showClose}) => {
           {showBack ? (
             <TouchableOpacity onPress={() => navigation.goBack()}>
               <Image
-                source={getImageSource(require('../../assets/images/back.png'))}
+                source={getImageSource(Images.back_icon)}
                 style={{height: Scale(20), width: Scale(20)}}
                 tintColor={Colors.White}
               />
@@ -51,9 +52,7 @@ const Header = ({header, showBack = true, showClose}) => {
           {showClose ? (
             <TouchableOpacity onPress={() => navigation.goBack()}>
               <Image
-                source={getImageSource(
-                  require('../../assets/images/close.png'),
-                )}
+                source={getImageSource(Images.close_icon)}
                 style={{height: Scale(25), width: Scale(25)}}
                 tintColor={Colors.White}
               />

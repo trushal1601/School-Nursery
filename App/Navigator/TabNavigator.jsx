@@ -15,6 +15,7 @@ import Colors from '../assets/colors/Colors';
 import Fonts from '../assets/fonts/Fonts';
 import HomeScreen from '../Screen/AppFlow/TabScreen/HomeScreen';
 import Scale from '../Screen/AuthFlow/ResponsiveScreen';
+import { Images } from '../assets/images/Images';
 
 const TabNavigator = () => {
   const Tab = createBottomTabNavigator();
@@ -90,7 +91,7 @@ const TabNavigator = () => {
                   alignItems: ' ',
                 }}>
                 <Image
-                  source={getImageSource(require('../assets/images/search.png'))}
+                  source={getImageSource(Images.search_icon)}
                   style={{width: Scale(25), height: Scale(25)}}
                   tintColor={'white'}
                 />

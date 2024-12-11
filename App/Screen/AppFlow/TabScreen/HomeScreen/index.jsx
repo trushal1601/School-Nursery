@@ -24,6 +24,7 @@ import {
 } from '../../../../Components/JsonData/JsonData';
 import {HomeScreenStyles} from './HomeScreenStyle';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
+import {Images} from '../../../../assets/images/Images';
 
 const HomeScreen = ({navigation}) => {
   return (
@@ -42,7 +43,7 @@ const HomeScreen = ({navigation}) => {
             placeholderTextColor={Colors.White}
           />
           <Image
-            source={require('../../../../assets/images/search.png')}
+            source={Images.search_icon}
             style={HomeScreenStyles.searchIcon}
             tintColor={'white'}
           />

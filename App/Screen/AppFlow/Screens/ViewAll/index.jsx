@@ -14,6 +14,7 @@ import Fonts from '../../../../assets/fonts/Fonts';
 import {AirbnbRating, Rating} from 'react-native-ratings';
 import {ViewAllStyle} from './ViewAllStyle';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
+import { Images } from '../../../../assets/images/Images';
 
 const ViewAll = ({navigation, route}) => {
   const state = route.params;
@@ -78,7 +79,7 @@ const ViewAll = ({navigation, route}) => {
           <View style={ViewAllStyle.headerContent}>
             <TouchableOpacity onPress={() => navigation.goBack()}>
               <Image
-                source={require('../../../../assets/images/back.png')}
+                source={Images.back_icon}
                 style={ViewAllStyle.backIcon}
                 tintColor={Colors.White}
               />
@@ -96,7 +97,7 @@ const ViewAll = ({navigation, route}) => {
                 placeholderTextColor={Colors.White}
               />
               <Image
-                source={require('../../../../assets/images/search.png')}
+                source={Images.search_icon}
                 style={ViewAllStyle.searchIcon}
                 tintColor="white"
               />
@@ -105,7 +106,7 @@ const ViewAll = ({navigation, route}) => {
               style={ViewAllStyle.filterButton}
               onPress={() => navigation.navigate('filter')}>
               <Image
-                source={require('../../../../assets/images/filter.png')}
+                source={Images.filter_icon}
                 style={ViewAllStyle.filterIcon}
                 tintColor={Colors.White}
               />

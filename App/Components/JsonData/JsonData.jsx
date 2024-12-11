@@ -1,4 +1,3 @@
-import {date} from 'yup';
 import Colors from '../../assets/colors/Colors';
 import Labels from '../../assets/Label/Labels';
 
@@ -905,6 +904,7 @@ export const SliderData = [
   {
     id: '3',
     text: 'Looking for childcare or a school? ',
+    // img: require('../../assets/images/Carousal.png'),
     img: 'https://fbflipper.com/img/icon.png',
     bgColor: Colors.Primary,
   },
@@ -917,7 +917,8 @@ export const SliderData = [
   {
     id: '5',
     text: 'Looking for childcare or a school? ',
-    img: 'https://picsum.photos/id/237/200/300',
+    img: require('../../assets/images/Carousal.png'),
+    // img: 'https://picsum.photos/id/237/200/300',
     bgColor: '#FFC823',
   },
 ];
@@ -1483,28 +1484,30 @@ export const EventDetail = {
   ],
 };
 
-export const ReduxData=[
+export const ReduxData = [
   {
-      name:"samsung",
-      price:30000,
-      img:require("../../assets/images/Phone.jpeg")
+    name: 'samsung',
+    price: 30000,
+    img: require('../../assets/images/Phone.jpeg'),
   },
   {
-      name:"samsung23",
-      price:40000,
-      img:require("../../assets/images/Phone2.jpeg")
-  }, {
-      name:"samsung21",
-      price:50000,
-      img:require("../../assets/images/Phone.jpeg")
-  }, {
-      name:"samsung31",
-      price:60000,
-      img:require("../../assets/images/Phone2.jpeg")
-  }, {
-      name:"samsung24",
-      price:10000,
-      img:require("../../assets/images/Phone.jpeg")
+    name: 'samsung23',
+    price: 40000,
+    img: require('../../assets/images/Phone2.jpeg'),
   },
-
-]
+  {
+    name: 'samsung21',
+    price: 50000,
+    img: require('../../assets/images/Phone.jpeg'),
+  },
+  {
+    name: 'samsung31',
+    price: 60000,
+    img: require('../../assets/images/Phone2.jpeg'),
+  },
+  {
+    name: 'samsung24',
+    price: 10000,
+    img: require('../../assets/images/Phone.jpeg'),
+  },
+];

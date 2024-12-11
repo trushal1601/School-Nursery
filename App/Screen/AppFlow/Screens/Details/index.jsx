@@ -18,6 +18,7 @@ import Timing from 'react-native-vector-icons/FontAwesome5';
 import {DetailsFooter} from '../../../../Components/JsonData/JsonData';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
 import {DetailsStyle} from './DetailsStyle';
+import { Images } from '../../../../assets/images/Images';
 
 const {width} = Dimensions.get('window');
 
@@ -140,7 +141,7 @@ const Details = ({route, navigation}) => {
                 <View style={DetailsStyle.phoneMapContainer}>
                   <Image
                     source={getImageSource(
-                      require('../../../../assets/images/Phone.png'),
+                    Images.phone_icon
                     )}
                     style={DetailsStyle.phoneMapImg}
                   />
@@ -148,7 +149,7 @@ const Details = ({route, navigation}) => {
                   <TouchableOpacity onPress={() => navigation.navigate('map')}>
                     <Image
                       source={getImageSource(
-                        require('../../../../assets/images/Map.png'),
+                       Images.map_icon
                       )}
                       style={DetailsStyle.phoneMapImg}
                     />
@@ -258,7 +259,7 @@ const Details = ({route, navigation}) => {
                 <View style={DetailsStyle.featureSubContainer}>
                   <Image
                     source={getImageSource(
-                      require('../../../../assets/images/Visiting.png'),
+                    Images.visit_icon
                     )}
                     style={DetailsStyle.visitImg}
                   />
@@ -298,7 +299,7 @@ const Details = ({route, navigation}) => {
                     </View>
 
                     <Image
-                      source={require('../../../../assets/images/Next.png')}
+                      source={Images.next_icon}
                     />
                   </TouchableOpacity>
                 );
