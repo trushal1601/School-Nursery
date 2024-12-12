@@ -20,6 +20,7 @@ import NewsEvent from '../Screen/AppFlow/Screens/NewsEvent';
 import AboutUs from '../Screen/AppFlow/Screens/AboutUs';
 import RecentEvents from '../Screen/AppFlow/Screens/RecentEvent';
 import BlogDetails from '../Components/BlogDetails';
+import Cart from '../store/UI/Cart';
 
 const MainNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -46,6 +47,7 @@ const MainNavigator = () => {
         <Stack.Screen name="parentGuide" component={ParentGuide} />
         <Stack.Screen name="newsEvent" component={NewsEvent} />
         <Stack.Screen name="aboutUs" component={AboutUs} />
+        <Stack.Screen name="cart" component={Cart} />
       </Stack.Navigator>
     </NavigationContainer>
   );

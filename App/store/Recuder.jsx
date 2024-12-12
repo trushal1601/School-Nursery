@@ -1,9 +1,9 @@
-// reducer.js
 import {
   ADDITION,
   SUBSTRACTION,
   ADD_TO_CART,
   REMOVE_FROM_CART,
+  GET_DATA,
 } from './ActionType';
 
 const initialState = {
@@ -25,14 +25,36 @@ export const mainReducer = (state = initialState, action) => {
 export const reducer = (state = initialState2, action) => {
   switch (action.type) {
     case ADD_TO_CART:
-      console.log('reducer', action);
-
-      return [...state, action.data];
+      const existingItem = state.find(item => item.id === action.data.id);
+      if (existingItem) {
+        return state.map(item =>
+          item.id === action.data.id
+            ? {...item, quantity: item.quantity + 1}
+            : item,
+        );
+      } else {
+        return [...state, {...action.data, quantity: 1}];
+      }
     case REMOVE_FROM_CART:
-      let result = state.filter(item => {
-        return item.name != action.data;
-      });
-      return [...result];
+      return state.reduce((result, item) => {
+        if (item.id === action.data) {
+          if (item.quantity > 1) {
+            result.push({...item, quantity: item.quantity - 1});
+          }
+        } else {
+          result.push(item);
+        }
+        return result;
+      }, []);
+    default:
+      return state;
+  }
+};
+
+export const getData = (state = [], action) => {
+  switch (action.type) {
+    case GET_DATA:
+      return action.data;
     default:
       return state;
   }

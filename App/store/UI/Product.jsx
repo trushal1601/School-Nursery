@@ -1,55 +1,125 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import {Button} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {addToCart, removeFromCart} from '../Action';
+import Scale from '../../Screen/AuthFlow/ResponsiveScreen';
+import Fonts from '../../assets/fonts/Fonts';
+import {Colors} from '../../assets/Assests';
 
-const Product = ({item, index}) => {
+const Product = ({item, index, mode}) => {
   const dispatch = useDispatch();
-  const [isAdded, setIsAdded] = useState(false);
   const cartData = useSelector(state => state.cart);
-  console.warn('data', cartData);
+  const [isAdded, setIsAdded] = useState(false);
+  const [quantity, setQuantity] = useState(0);
+
+  const getImageSource = img => {
+    if (typeof img === 'string') {
+      return {uri: img};
+    }
+    return img;
+  };
+
   const handleAddToCart = item => {
-    console.warn(item, 'Clicked');
     dispatch(addToCart(item));
   };
+
   const handleRemoveFromCart = item => {
-    console.warn(item);
-    dispatch(removeFromCart(item.name));
+    dispatch(removeFromCart(item.id));
   };
 
   useEffect(() => {
-    let result = cartData.filter(element => {
-      return element.name == item.name;
-    });
-    if (result.length) {
+    let result = cartData.find(element => element.id === item.id);
+    if (result) {
       setIsAdded(true);
+      setQuantity(result.quantity);
     } else {
       setIsAdded(false);
+      setQuantity(0);
     }
-  }, [cartData]);
+  }, [cartData, item.id]);
+
+  const specificTotalAmount = item.price * quantity;
+
   return (
     <View
-      key={index}
+      key={item.id}
       style={{
-        borderBottomWidth: 1,
+        justifyContent: 'center',
+        borderWidth: Scale(1),
+        width: Scale(170),
         alignItems: 'center',
-        paddingVertical: 25,
+        paddingVertical: Scale(25),
+        margin: Scale(10),
+        borderRadius: Scale(20),
+        backgroundColor: Colors.White,
+        borderColor: Colors.DarkGrey,
       }}>
       <Image
-        source={item.img}
-        style={{height: 100, width: 100}}
+        source={getImageSource(item.image)}
+        style={{height: Scale(100), width: Scale(100)}}
         resizeMode="contain"
       />
-      <Text style={{fontSize: 18}}>{item.name}</Text>
-      <Text style={{paddingBottom: 10, fontSize: 18}}>{item.price}</Text>
+      <Text
+        style={{
+          fontSize: 15,
+          fontFamily: Fonts.Lexend_Medium,
+          paddingHorizontal: Scale(10),
+        }}
+        numberOfLines={2}>
+        {item.title}
+      </Text>
+      <Text
+        style={{
+          paddingBottom: Scale(10),
+          fontSize: Scale(18),
+          fontFamily: Fonts.Lexend_Regular,
+          paddingTop: Scale(10),
+        }}>
+        ₹{item.price}
+      </Text>
       {isAdded ? (
-        <Button
-          title="Remove from Cart"
-          onPress={() => handleRemoveFromCart(item)}
-        />
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <TouchableOpacity
+            onPress={() => handleRemoveFromCart(item)}
+            style={{
+              borderWidth: Scale(1),
+              padding: Scale(3),
+              borderColor: Colors.Primary,
+              borderRadius: Scale(9),
+              paddingHorizontal: Scale(12),
+            }}>
+            <Text style={{fontSize: Scale(18)}}>-</Text>
+          </TouchableOpacity>
+          <Text style={{marginHorizontal: Scale(10)}}>{quantity}</Text>
+          <TouchableOpacity
+            onPress={() => handleAddToCart(item)}
+            style={{
+              borderWidth: Scale(1),
+              padding: Scale(3),
+              borderColor: Colors.Primary,
+              borderRadius: Scale(9),
+              paddingHorizontal: Scale(10),
+            }}>
+            <Text style={{fontSize: Scale(17)}}>+</Text>
+          </TouchableOpacity>
+        </View>
       ) : (
-        <Button title=" Add to Cart" onPress={() => handleAddToCart(item)} />
+        <TouchableOpacity
+          onPress={() => handleAddToCart(item)}
+          style={{
+            backgroundColor: Colors.Primary,
+            padding: Scale(7),
+            borderRadius: Scale(9),
+          }}>
+          <Text style={{color: Colors.White}}>Add to Cart</Text>
+        </TouchableOpacity>
+      )}
+      {mode === 'cart' && (
+        <View style={{marginTop: Scale(10)}}>
+          <Text style={{fontSize: Scale(14), fontFamily: Fonts.Lexend_Medium}}>
+            Total is : {specificTotalAmount}
+          </Text>
+        </View>
       )}
     </View>
   );

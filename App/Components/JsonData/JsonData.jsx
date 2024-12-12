@@ -1486,28 +1486,43 @@ export const EventDetail = {
 
 export const ReduxData = [
   {
-    name: 'samsung',
-    price: 30000,
-    img: require('../../assets/images/Phone.jpeg'),
+    name: 'Coke (SugerLess)',
+    price: 30,
+    img: require('../../assets/images/redux1.png'),
   },
   {
-    name: 'samsung23',
-    price: 40000,
-    img: require('../../assets/images/Phone2.jpeg'),
+    name: 'CocaCola',
+    price: 40,
+    img: require('../../assets/images/redux2.png'),
   },
   {
-    name: 'samsung21',
-    price: 50000,
-    img: require('../../assets/images/Phone.jpeg'),
+    name: 'Pasta',
+    price: 55,
+    img: require('../../assets/images/redux3.png'),
   },
   {
-    name: 'samsung31',
-    price: 60000,
-    img: require('../../assets/images/Phone2.jpeg'),
+    name: 'Sprite',
+    price: 40,
+    img: require('../../assets/images/redux4.png'),
   },
   {
-    name: 'samsung24',
-    price: 10000,
-    img: require('../../assets/images/Phone.jpeg'),
+    name: 'Bell Pepper Red',
+    price: 150,
+    img: require('../../assets/images/redux5.png'),
+  },
+  {
+    name: 'Apple',
+    price: 125,
+    img: require('../../assets/images/redux6.png'),
+  },
+  {
+    name: 'Mayyonies',
+    price: 250,
+    img: require('../../assets/images/redux7.png'),
+  },
+  {
+    name: 'Ginger',
+    price: 50,
+    img: require('../../assets/images/redux8.png'),
   },
 ];
