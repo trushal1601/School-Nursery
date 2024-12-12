@@ -1,5 +1,5 @@
-import Colors from '../../assets/colors/Colors';
-import Labels from '../../assets/Label/Labels';
+import {Colors} from '../../assets/Assests';
+import {Labels} from '../../assets/Assests';
 
 export const Nursery = [
   {

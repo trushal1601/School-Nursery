@@ -10,7 +10,7 @@ import {
 import React, {useRef, useState} from 'react';
 import Header from '../../../../Components/Header';
 import Fonts from '../../../../assets/fonts/Fonts';
-import Colors from '../../../../assets/colors/Colors';
+import {Colors} from '../../../../assets/Assests';
 import {AirbnbRating} from 'react-native-ratings';
 import Profile from 'react-native-vector-icons/MaterialCommunityIcons';
 import Feature from 'react-native-vector-icons/Entypo';
@@ -18,7 +18,7 @@ import Timing from 'react-native-vector-icons/FontAwesome5';
 import {DetailsFooter} from '../../../../Components/JsonData/JsonData';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
 import {DetailsStyle} from './DetailsStyle';
-import { Images } from '../../../../assets/images/Images';
+import { Images } from '../../../../assets/Assests';
 
 const {width} = Dimensions.get('window');
 

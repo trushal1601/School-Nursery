@@ -2,7 +2,7 @@ import {Dimensions, FlatList, ScrollView, Text, View} from 'react-native';
 import React from 'react';
 import Header from '../../../../Components/Header';
 import {TestimonialStyle} from './TestimonialStyle';
-import Labels from '../../../../assets/Label/Labels';
+import {Labels} from '../../../../assets/Assests';
 
 const Testimonials = ({route}) => {
   const {data} = route.params;

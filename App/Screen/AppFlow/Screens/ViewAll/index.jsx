@@ -9,12 +9,11 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import Colors from '../../../../assets/colors/Colors';
-import Fonts from '../../../../assets/fonts/Fonts';
+import {Colors} from '../../../../assets/Assests';
 import {AirbnbRating, Rating} from 'react-native-ratings';
 import {ViewAllStyle} from './ViewAllStyle';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
-import { Images } from '../../../../assets/images/Images';
+import { Images } from '../../../../assets/Assests';
 
 const ViewAll = ({navigation, route}) => {
   const state = route.params;

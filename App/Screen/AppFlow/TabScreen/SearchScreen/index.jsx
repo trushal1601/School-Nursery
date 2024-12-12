@@ -8,15 +8,14 @@ import {
   View,
 } from 'react-native';
 import React, {useState} from 'react';
-import Colors from '../../../../assets/colors/Colors';
+import {Colors} from '../../../../assets/Assests';
 import Fonts from '../../../../assets/fonts/Fonts';
-import searchImg from '../../../../assets/images/SearchPage.png';
 import {Dropdown} from 'react-native-element-dropdown';
 import Header from '../../../../Components/Header';
 import {SearchScreenStyle} from './SearchScreenStyle';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
-import Labels from '../../../../assets/Label/Labels';
-import { Images } from '../../../../assets/images/Images';
+import {Labels} from '../../../../assets/Assests';
+import { Images } from '../../../../assets/Assests';
 
 const SearchScreen = () => {
   const [value, setValue] = useState(null);

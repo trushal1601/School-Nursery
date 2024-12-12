@@ -2,13 +2,12 @@ import {FlatList, Image, Text, TouchableOpacity, View} from 'react-native';
 import React, {useState} from 'react';
 import Header from '../../../../Components/Header';
 import {PersonName} from '../../../../Components/JsonData/JsonData';
-import Colors from '../../../../assets/colors/Colors';
 import Fonts from '../../../../assets/fonts/Fonts';
 import {AirbnbRating, Rating} from 'react-native-ratings';
 import {ReviewStyle} from './ReviewStyle';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
-import Labels from '../../../../assets/Label/Labels';
-import { Images } from '../../../../assets/images/Images';
+import {Labels} from '../../../../assets/Assests';
+import { Images } from '../../../../assets/Assests';
 
 const Review = ({navigation, route}) => {
   const {mode, data} = route.params;

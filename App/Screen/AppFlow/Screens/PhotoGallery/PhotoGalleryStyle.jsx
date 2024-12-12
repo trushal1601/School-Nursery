@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import Colors from '../../../../assets/colors/Colors';
+import {Colors} from '../../../../assets/Assests';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
 
 export const PhotoGalleryStyle = StyleSheet.create({

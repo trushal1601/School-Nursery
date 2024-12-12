@@ -11,11 +11,11 @@ import SearchScreen from '../Screen/AppFlow/TabScreen/SearchScreen';
 import ViewMoreScreen from '../Screen/AppFlow/TabScreen/ViewMoreScreen';
 import Home from 'react-native-vector-icons/Entypo';
 import Menu from 'react-native-vector-icons/AntDesign';
-import Colors from '../assets/colors/Colors';
+import {Colors} from '../assets/Assests';
 import Fonts from '../assets/fonts/Fonts';
 import HomeScreen from '../Screen/AppFlow/TabScreen/HomeScreen';
 import Scale from '../Screen/AuthFlow/ResponsiveScreen';
-import { Images } from '../assets/images/Images';
+import { Images } from '../assets/Assests';
 
 const TabNavigator = () => {
   const Tab = createBottomTabNavigator();

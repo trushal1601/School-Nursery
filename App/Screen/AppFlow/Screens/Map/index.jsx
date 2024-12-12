@@ -8,14 +8,12 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import Header from '../../../../Components/Header';
-import Labels from '../../../../assets/Label/Labels';
+import {Labels} from '../../../../assets/Assests';
 import {useDispatch, useSelector} from 'react-redux';
 import {addition, substraction, addToCart} from '../../../../store/Action';
 import Fonts from '../../../../assets/fonts/Fonts';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
 import {ReduxData} from '../../../../Components/JsonData/JsonData';
-import {Image} from 'react-native';
-import Colors from '../../../../assets/colors/Colors';
 import ReduxHeader from '../../../../store/UI/ReduxHeader';
 import Product from '../../../../store/UI/Product';
 

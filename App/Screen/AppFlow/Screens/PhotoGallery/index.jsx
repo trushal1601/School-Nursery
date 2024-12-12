@@ -1,11 +1,11 @@
 import {Image, View, ActivityIndicator} from 'react-native';
 import React, {useState, useEffect} from 'react';
-import Colors from '../../../../assets/colors/Colors';
+import {Colors} from '../../../../assets/Assests';
 import Header from '../../../../Components/Header';
 import MasonryList from '@react-native-seoul/masonry-list';
 import {PhotoGalleryImg} from '../../../../Components/JsonData/JsonData';
 import {PhotoGalleryStyle} from './PhotoGalleryStyle';
-import Labels from '../../../../assets/Label/Labels';
+import {Labels} from '../../../../assets/Assests';
 
 const PhotoGallery = () => {
   const [data, setData] = useState([]);

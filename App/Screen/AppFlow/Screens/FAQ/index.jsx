@@ -1,12 +1,10 @@
 import {Image, Text, TouchableOpacity, View, FlatList} from 'react-native';
 import React, {useState} from 'react';
 import Header from '../../../../Components/Header';
-import Colors from '../../../../assets/colors/Colors';
 import Collapsible from 'react-native-collapsible';
-import Fonts from '../../../../assets/fonts/Fonts';
 import {FAQStyle} from './FAQStyle';
-import Labels from '../../../../assets/Label/Labels';
-import { Images } from '../../../../assets/images/Images';
+import {Labels} from '../../../../assets/Assests';
+import { Images } from '../../../../assets/Assests';
 
 const FAQ = ({route}) => {
   const [expanded, setExpanded] = useState(null);

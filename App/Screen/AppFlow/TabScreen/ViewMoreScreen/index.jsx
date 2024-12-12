@@ -11,8 +11,8 @@ import Header from '../../../../Components/Header';
 import {ViewMoreData} from '../../../../Components/JsonData/JsonData';
 import {ViewMoreScreenStyle} from './ViewMoreScreenStyle';
 import {date} from 'yup';
-import Labels from '../../../../assets/Label/Labels';
-import { Images } from '../../../../assets/images/Images';
+import {Labels} from '../../../../assets/Assests';
+import { Images } from '../../../../assets/Assests';
 
 const ViewMoreScreen = ({navigation}) => {
   return (

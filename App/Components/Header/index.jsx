@@ -1,10 +1,10 @@
 import {Image, StatusBar, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import Colors from '../../assets/colors/Colors';
+import {Colors} from '../../assets/Assests';
 import Fonts from '../../assets/fonts/Fonts';
 import {useNavigation} from '@react-navigation/native';
 import Scale from '../../Screen/AuthFlow/ResponsiveScreen';
-import {Images} from '../../assets/images/Images';
+import {Images} from '../../assets/Assests';
 
 const Header = ({header, showBack = true, showClose}) => {
   const navigation = useNavigation();

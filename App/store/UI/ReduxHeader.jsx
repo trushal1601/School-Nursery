@@ -1,6 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React, { useEffect, useState } from 'react';
-import Colors from '../../assets/colors/Colors';
+import {Colors} from '../../assets/Assests';
 import { useSelector } from 'react-redux';
 
 const ReduxHeader = () => {

@@ -2,11 +2,12 @@ import React, {useState} from 'react';
 import {Text, TextInput, View, TouchableOpacity} from 'react-native';
 import {Dropdown} from 'react-native-element-dropdown';
 import Fonts from '../../../../assets/fonts/Fonts';
-import Colors from '../../../../assets/colors/Colors';
+import {Colors} from '../../../../assets/Assests';
+
 import Header from '../../../../Components/Header';
 import {ContactUsStyle} from './ContactUsStyle';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
-import Labels from '../../../../assets/Label/Labels';
+import {Labels} from '../../../../assets/Assests';
 
 const ContactUs = ({navigation}) => {
   const [formValues, setFormValues] = useState({

@@ -3,8 +3,9 @@ import React from 'react';
 import Header from '../../../../Components/Header';
 import {AboutUsStyle} from './AboutUsStyle';
 import RenderHTML from 'react-native-render-html';
-import Colors from '../../../../assets/colors/Colors';
-import Labels from '../../../../assets/Label/Labels';
+import {Colors} from '../../../../assets/Assests';
+
+import {Labels} from '../../../../assets/Assests';
 
 const AboutUs = () => {
   const source = {

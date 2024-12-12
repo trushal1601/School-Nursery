@@ -1,11 +1,10 @@
 import {Dimensions, Image, Text, View} from 'react-native';
 import React from 'react';
 import Fonts from '../../assets/fonts/Fonts';
-import Colors from '../../assets/colors/Colors';
 import Header from '../Header';
 import RenderHtml from 'react-native-render-html';
 import {BlogDetailsStyle} from './BlogDetailsStyle';
-import { Images } from '../../assets/images/Images';
+import { Images } from '../../assets/Assests';
 
 const BlogDetails = ({route}) => {
   const getImageSource = img => {

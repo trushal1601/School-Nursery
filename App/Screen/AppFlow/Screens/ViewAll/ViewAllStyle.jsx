@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import Colors from '../../../../assets/colors/Colors';
+import {Colors} from '../../../../assets/Assests';
 import Fonts from '../../../../assets/fonts/Fonts';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
 

@@ -6,7 +6,6 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import Colors from '../../assets/colors/Colors';
 import Fonts from '../../assets/fonts/Fonts';
 import { useNavigation } from '@react-navigation/native';
 import Header from '../Header';

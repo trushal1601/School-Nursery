@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import Header from '../Header';
-import Colors from '../../assets/colors/Colors';
+import {Colors} from '../../assets/Assests';
 import Fonts from '../../assets/fonts/Fonts';
 import {useNavigation} from '@react-navigation/native';
 import {BlogHorizontalCardStyle} from './BlogHorizontalCard';

@@ -8,7 +8,8 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import Header from '../../../../Components/Header';
-import Colors from '../../../../assets/colors/Colors';
+import {Colors} from '../../../../assets/Assests';
+
 import {FeatursforReview} from '../../../../Components/JsonData/JsonData';
 import {AirbnbRating, Rating} from 'react-native-ratings';
 import Fonts from '../../../../assets/fonts/Fonts';

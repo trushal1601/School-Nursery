@@ -2,7 +2,7 @@ import {FlatList, Image, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import Scale from '../../Screen/AuthFlow/ResponsiveScreen';
 import {HomeScreenCompoStyle} from './HomeScreenCompoStyle';
-import {Images} from '../../assets/images/Images';
+import {Images} from '../../assets/Assests';
 
 export const HorizontalScroll = ({data, firstText}) => {
   const navigation = useNavigation();

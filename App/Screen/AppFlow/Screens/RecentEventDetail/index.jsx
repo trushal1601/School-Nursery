@@ -8,13 +8,13 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import Header from '../../../../Components/Header';
-import Colors from '../../../../assets/colors/Colors';
+import {Colors} from '../../../../assets/Assests';
 import Profile from 'react-native-vector-icons/MaterialCommunityIcons';
 import Fonts from '../../../../assets/fonts/Fonts';
 import {EventDetail} from '../../../../Components/JsonData/JsonData';
 import {RecentEventDetailStyle} from './RecentEventDetailStyle';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
-import Labels from '../../../../assets/Label/Labels';
+import {Labels} from '../../../../assets/Assests';
 
 const RecentEventDetail = ({route}) => {
   const {event, header} = route.params;

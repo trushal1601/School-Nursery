@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import Colors from '../../../../assets/colors/Colors';
+import {Colors} from '../../../../assets/Assests';
 import {
   HorizontalScroll,
   VerticalScroll,
@@ -24,7 +24,7 @@ import {
 } from '../../../../Components/JsonData/JsonData';
 import {HomeScreenStyles} from './HomeScreenStyle';
 import Scale from '../../../AuthFlow/ResponsiveScreen';
-import {Images} from '../../../../assets/images/Images';
+import {Images} from '../../../../assets/Assests';
 
 const HomeScreen = ({navigation}) => {
   return (
