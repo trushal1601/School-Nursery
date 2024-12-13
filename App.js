@@ -5,9 +5,11 @@ import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import Fonts from './App/assets/fonts/Fonts';
 import MainNavigator from './App/Navigator/MainNavigator';
 import SplashScreen from 'react-native-splash-screen';
-import {Provider} from 'react-redux'
-import { store } from './App/store/Store';
+import {Provider} from 'react-redux';
+import {persistor, store} from './App/store/Store';
 import MainNavigation from './src/Navigation/MainNavigation';
+import {persistStore} from 'redux-persist';
+import {PersistGate} from 'redux-persist/integration/react';
 
 const App = () => {
   useEffect(() => {
@@ -18,9 +20,11 @@ const App = () => {
   }, []);
   return (
     <Provider store={store}>
-    <GestureHandlerRootView style={{flex: 1}}>
-      <MainNavigator />
-    </GestureHandlerRootView>
+      <PersistGate persistor={persistor}>
+        <GestureHandlerRootView style={{flex: 1}}>
+          <MainNavigator />
+        </GestureHandlerRootView>
+      </PersistGate>
     </Provider>
   );
 };

@@ -10,8 +10,6 @@ import {useNavigation} from '@react-navigation/native';
 const Cart = () => {
   const navigation = useNavigation();
   const cartData = useSelector(state => state.cart);
-  //   console.warn('cart', cartData);
-
   const totalAmount = cartData.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0,

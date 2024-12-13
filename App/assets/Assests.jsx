@@ -4,7 +4,7 @@ export const Colors = {
   DarkGrey: '#6D6D6D',
   Black: '#333333',
   Star: '#FFC109',
-  White: 'white',
+  White: '#FFF',
   BackGroundColor: '#F2F5FC',
 };
 

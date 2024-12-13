@@ -44,7 +44,6 @@ const Product = ({item, index, mode}) => {
     <View
       key={item.id}
       style={{
-        justifyContent: 'center',
         borderWidth: Scale(1),
         width: Scale(170),
         alignItems: 'center',
@@ -54,6 +53,11 @@ const Product = ({item, index, mode}) => {
         backgroundColor: Colors.White,
         borderColor: Colors.DarkGrey,
       }}>
+      {mode == 'cart' && (
+        <TouchableOpacity>
+          <Text>Delete</Text>
+        </TouchableOpacity>
+      )}
       <Image
         source={getImageSource(item.image)}
         style={{height: Scale(100), width: Scale(100)}}
