@@ -23,6 +23,7 @@ const App = () => {
       <PersistGate persistor={persistor}>
         <GestureHandlerRootView style={{flex: 1}}>
           <MainNavigator />
+          {/* <MainNavigation/> */}
         </GestureHandlerRootView>
       </PersistGate>
     </Provider>

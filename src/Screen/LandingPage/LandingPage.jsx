@@ -1,5 +1,12 @@
-import {Image, ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import React from 'react';
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import React, {useEffect, useState} from 'react';
 import Logo from '../../assets/Logo1.png';
 import fb from '../../assets/facebook.png';
 import google from '../../assets/google.png';
@@ -16,14 +23,14 @@ const LandingPage = ({navigation}) => {
         </Text>
       </View>
       <View>
-        <View style={styles.continue}>
+        <TouchableOpacity style={styles.continue}>
           <Image source={fb} style={styles.logo} />
           <Text style={styles.continueText}>Continue With Facebook</Text>
-        </View>
-        <View style={styles.continue}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.continue}>
           <Image source={google} style={styles.logo} />
           <Text style={styles.continueText}>Continue With Google</Text>
-        </View>
+        </TouchableOpacity>
       </View>
       <View style={styles.or}>
         <Text style={styles.orText}>OR</Text>
